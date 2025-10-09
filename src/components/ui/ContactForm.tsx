@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { initEmailJS, sendEmail } from '@/lib/emailjs';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,11 @@ const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
+  // Initialiser EmailJS au chargement du composant
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -26,23 +32,24 @@ const ContactForm = () => {
     setSubmitting(true);
     setError('');
     
-    // Simulate sending an email (in a real project, we would use an API)
     try {
-      // Simulate API call with a delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const result = await sendEmail(formData);
       
-      console.log('Form submitted:', formData);
-      setSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        subject: '',
-      });
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          subject: '',
+        });
+      } else {
+        throw new Error('Échec de l\'envoi du message');
+      }
     } catch (err) {
-      console.error('Error submitting form:', err);
-      setError('An error occurred while sending the message. Please try again.');
+      console.error('Erreur lors de l\'envoi:', err);
+      setError('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
     } finally {
       setSubmitting(false);
     }
@@ -74,7 +81,7 @@ const ContactForm = () => {
           <p className="text-brown mb-6">We will respond to you as soon as possible.</p>
           <button
             onClick={() => setSubmitted(false)}
-            className="px-6 py-2 bg-brown-dark text-cream rounded hover:bg-gold transition-colors duration-200"
+            className="px-6 py-2 bg-brown-dark text-cream rounded-lg border-2 border-gold hover:bg-gold hover:text-brown-dark transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
           >
             New message
           </button>
@@ -174,10 +181,10 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={submitting}
-              className={`px-8 py-3 rounded ${
+              className={`px-8 py-3 rounded-lg border-2 shadow-lg transition-all duration-300 ${
                 submitting
-                  ? 'bg-brown-light text-cream/70 cursor-not-allowed'
-                  : 'bg-brown-dark text-cream hover:bg-gold-dark transition-colors duration-200'
+                  ? 'bg-brown-light text-cream/70 cursor-not-allowed border-brown-light'
+                  : 'bg-brown-dark text-cream hover:bg-gold hover:text-brown-dark border-gold hover:shadow-xl cursor-pointer'
               }`}
             >
               {submitting ? 'Sending...' : 'Send'}

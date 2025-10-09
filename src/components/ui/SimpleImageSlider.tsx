@@ -27,11 +27,6 @@ const SimpleImageSlider = ({
     return () => clearInterval(interval);
   }, [images.length, autoplaySpeed]);
   
-  // Gérer le clic sur les indicateurs
-  const handleDotClick = (index: number) => {
-    setCurrentIndex(index);
-  };
-  
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Images avec animation de défilement horizontal */}
@@ -55,41 +50,6 @@ const SimpleImageSlider = ({
           )}
         </motion.div>
       </AnimatePresence>
-      
-      {/* Indicateurs (points) */}
-      <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => handleDotClick(index)}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              index === currentIndex ? 'bg-gold' : 'bg-cream/50 hover:bg-cream/70'
-            }`}
-            aria-label={`Aller à l'image ${index + 1}`}
-          />
-        ))}
-      </div>
-      
-      {/* Flèches de navigation */}
-      <button
-        onClick={() => setCurrentIndex((currentIndex - 1 + images.length) % images.length)}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-cream/80 hover:bg-gold/80 rounded-full p-2 transition-colors duration-200"
-        aria-label="Image précédente"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-brown-dark">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-        </svg>
-      </button>
-      
-      <button
-        onClick={() => setCurrentIndex((currentIndex + 1) % images.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-cream/80 hover:bg-gold/80 rounded-full p-2 transition-colors duration-200"
-        aria-label="Image suivante"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-brown-dark">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-        </svg>
-      </button>
     </div>
   );
 };

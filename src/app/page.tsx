@@ -44,7 +44,7 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="h-screen relative pt-16">
+      <section className="h-screen relative pt-30">
         <div className="h-full">
           <SimpleImageSlider 
             images={heroImages}
@@ -52,60 +52,6 @@ export default function Home() {
             className="h-full"
           />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="text-center px-4">
-            <motion.h1 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-signature mb-2"
-              style={{ 
-          color: "var(--gold)", // Utilise la couleur dorée définie dans :root
-          textShadow: "1px 1px 8px var(--gold-light), 0 0 24px var(--gold-dark)",
-          fontFamily: "var(--font-dancing-script), cursive"
-              }}
-            >
-              Hanane's Signature
-            </motion.h1>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="w-32 h-0.5 bg-gold/70 mx-auto mb-6"
-            />
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-cream mb-8 max-w-2xl mx-auto"
-            >
-              Artisanal pastries that awaken your senses and delight your taste buds
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Link
-                href="/our-creations"
-                className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
-              >
-                Discover our creations
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-        >
-          <svg className="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </motion.div>
       </section>
       
       {/* À Propos Section */}
@@ -152,7 +98,7 @@ export default function Home() {
               
               <Link
                 href="/about-us"
-                className="inline-block mt-4 text-gold hover:text-gold-dark font-medium transition-colors duration-200"
+                className="inline-block mt-4 px-6 py-3 border-2 border-gold text-gold hover:bg-gold hover:text-brown-dark font-medium transition-all duration-300 rounded-lg shadow-md hover:shadow-lg"
               >
                 Learn more about us →
               </Link>
@@ -185,7 +131,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/our-creations"
-              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               View all our creations
             </Link>

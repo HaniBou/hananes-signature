@@ -13,7 +13,7 @@ export default function Contact() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-36 pb-16 bg-brown-dark text-cream relative" style={{
+      <section className="pt-44 pb-16 bg-brown-dark text-cream relative" style={{
         backgroundImage: `url('/images/banner-1.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'

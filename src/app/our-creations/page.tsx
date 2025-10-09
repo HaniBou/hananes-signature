@@ -102,7 +102,7 @@ export default function Creations() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-36 pb-16 bg-brown-dark text-cream relative" style={{
+      <section className="pt-44 pb-16 bg-brown-dark text-cream relative" style={{
         backgroundImage: `url('/images/banner-2.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
@@ -126,14 +126,14 @@ export default function Creations() {
       {/* Filter Section */}
       <section className="py-8 bg-brown-light/10 border-b border-brown-light/20">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
                 key={category}
-                className={`px-6 py-2 rounded-full transition-all duration-200 font-medium ${
+                className={`px-6 py-2 rounded-full transition-all duration-300 font-medium border-2 shadow-md hover:shadow-lg transform hover:scale-105 cursor-pointer ${
                   activeFilter === category 
-                    ? 'bg-gold text-brown-dark shadow-md' 
-                    : 'bg-brown-light/10 hover:bg-brown-light/20 text-brown-dark'
+                    ? 'bg-gold text-brown-dark border-gold-dark hover:bg-gold-dark' 
+                    : 'bg-brown-light/10 hover:bg-brown-light/20 text-brown-dark border-brown-light/30 hover:border-gold/50'
                 }`}
                 onClick={() => setActiveFilter(category)}
               >
@@ -191,7 +191,7 @@ export default function Creations() {
             
             <a
               href="/contact"
-              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Request a Quote
             </a>

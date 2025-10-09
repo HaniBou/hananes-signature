@@ -47,18 +47,18 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center">
               <img
-                src="/images/logo.svg"
+                src="/images/mon-logo.png"
                 alt="Hanane's Signature"
-                className="h-14 w-auto object-contain bg-cream/90 p-1 rounded-sm"
+                className="h-30 w-auto object-contain bg-cream/90 p-1 rounded-sm"
               />
             </Link>
             
-            {/* Titre Hanane's Signature */}
+            {/* Titre Hanane's Signature
             <div className="hidden lg:block">
               <h1 className="font-signature text-3xl" style={{ color: 'var(--gold)' }}>
                 Hanane's Signature
               </h1>
-            </div>
+            </div> */}
           </div>
 
           {/* Navigation Desktop */}

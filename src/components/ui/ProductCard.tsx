@@ -18,7 +18,7 @@ const ProductCard = ({ name, description, imageSrc, category }: ProductCardProps
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="bg-brown-dark/80 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gold/20"
+      className="bg-brown-dark/80 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gold/20 hover:border-gold/40"
     >
       <div className="relative h-60">
         <Image
