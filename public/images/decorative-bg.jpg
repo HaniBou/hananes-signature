@@ -1,0 +1,5 @@
+<!-- Placeholder SVG for decorative background element -->
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="600" fill="#3e2723" opacity="0.9"/>
+  <text x="600" y="300" font-family="Arial" font-size="40" fill="#d4af37" text-anchor="middle">Arrière-plan décoratif</text>
+</svg>

@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'SignatureScript';
+  src: url('/fonts/signature-script.woff2') format('woff2'),
+       url('/fonts/signature-script.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-signature {
+  font-family: var(--font-dancing-script), cursive;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}

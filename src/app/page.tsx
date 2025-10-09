@@ -1,103 +1,282 @@
-import Image from "next/image";
+'use client';
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import SimpleImageSlider from '@/components/ui/SimpleImageSlider';
+import SectionTitle from '@/components/ui/SectionTitle';
+import ProductCard from '@/components/ui/ProductCard';
+
+// Placeholder images - to be replaced with your own images
+const heroImages = [
+  { src: '/images/hero-1.jpeg', alt: 'Traditional Algerian pastries' },
+  { src: '/images/hero-2.jpeg', alt: 'French pastries' },
+  { src: '/images/hero-3.jpeg', alt: 'Birthday cakes' },
+];
+
+// Featured products data
+const featuredProducts = [
+  {
+    name: 'Date Makrout',
+    description: 'Traditional Algerian pastry made with semolina and dates, perfumed with orange blossom water',
+    imageSrc: '/images/makrout.jpg',
+    category: 'Algerian',
+  },
+  {
+    name: 'Mille-feuille',
+    description: 'Classic French pastry made of thin layers of puff pastry and vanilla custard cream',
+    imageSrc: '/images/millefeuille.jpg',
+    category: 'French',
+  },
+  {
+    name: 'Birthday Cake',
+    description: 'Custom cake with personalized flavors and decorations to celebrate your special occasion',
+    imageSrc: '/images/birthday-cake.jpg',
+    category: 'Birthday',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="h-screen relative pt-16">
+        <div className="h-full">
+          <SimpleImageSlider 
+            images={heroImages}
+            overlay={false}
+            className="h-full"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="text-center px-4">
+            <motion.h1 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-signature mb-2"
+              style={{ 
+          color: "var(--gold)", // Utilise la couleur dorée définie dans :root
+          textShadow: "1px 1px 8px var(--gold-light), 0 0 24px var(--gold-dark)",
+          fontFamily: "var(--font-dancing-script), cursive"
+              }}
+            >
+              Hanane's Signature
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="w-32 h-0.5 bg-gold/70 mx-auto mb-6"
+            />
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-cream mb-8 max-w-2xl mx-auto"
+            >
+              Artisanal pastries that awaken your senses and delight your taste buds
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link
+                href="/our-creations"
+                className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+              >
+                Discover our creations
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+          <svg className="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </motion.div>
+      </section>
+      
+      {/* À Propos Section */}
+      <section className="py-20 bg-cream">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/about.jpg"
+                  alt="Hanane's Signature - About Us"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
+                />
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <SectionTitle 
+                title="Our Story" 
+                centered={false}
+              />
+              
+              <p className="text-brown-light">
+                Hanane's Signature was born from a deep passion for the art of traditional Algerian and French pastry. Founded by Hanane, who has been passionate about cooking since her early years, our bakery combines ancestral know-how and modern techniques to offer you exceptional creations.
+              </p>
+              
+              <p className="text-brown-light">
+                Each pastry is prepared with love and attention to detail, using only premium ingredients to ensure an unforgettable taste experience.
+              </p>
+              
+              <Link
+                href="/about-us"
+                className="inline-block mt-4 text-gold hover:text-gold-dark font-medium transition-colors duration-200"
+              >
+                Learn more about us →
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Our Creations Section */}
+      <section className="py-20 text-cream">
+        <div className="container mx-auto px-4">
+          <SectionTitle 
+            title="Our Creations" 
+            subtitle="Discover our selection of artisanal pastries, prepared with passion and expertise"
+            className="text-cream"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredProducts.map((product, index) => (
+              <ProductCard
+                key={index}
+                name={product.name}
+                description={product.description}
+                imageSrc={product.imageSrc}
+                category={product.category}
+              />
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link
+              href="/our-creations"
+              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+            >
+              View all our creations
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* Testimonials Section */}
+      <section className="py-20 relative" style={{
+        backgroundImage: `url('/images/testimonial-bg.svg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <SectionTitle 
+            title="What Our Customers Say" 
+            subtitle="Satisfied clients who have enjoyed our pastries for their special events"
+            titleColor="text-gold"
+            subtitleColor="text-cream"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((item) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: item * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-md border border-gold/20"
+              >
+                <div className="flex items-center mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg key={star} className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-brown-dark mb-4">
+                  "The pastries from Hanane's Signature are truly exceptional! Everything was delicious and beautifully presented. My guests were impressed."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-brown-dark font-semibold mr-3">
+                    {item === 1 ? 'S' : item === 2 ? 'M' : 'L'}
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gold">
+                      {item === 1 ? 'Sarah L.' : item === 2 ? 'Mohammed R.' : 'Lucy D.'}
+                    </h4>
+                    <p className="text-sm text-cream/80">
+                      {item === 1 ? 'Birthday Cake' : item === 2 ? 'Wedding Assortment' : 'Corporate Order'}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Contact CTA Section */}
+      <section className="py-20 text-cream relative" style={{
+        backgroundImage: `url('/images/cta-bg.svg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif mb-6">
+              Ready to order a delicious creation?
+            </h2>
+            <p className="mb-8 text-cream/80 text-lg">
+              Contact us to discuss your project and create pastries together that will delight your guests.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute left-0 top-0 w-32 h-32 bg-gold/10 rounded-br-full"></div>
+        <div className="absolute right-0 bottom-0 w-32 h-32 bg-gold/10 rounded-tl-full"></div>
+      </section>
+      
+      <Footer />
+    </>
   );
 }
