@@ -19,7 +19,7 @@ const products = [
   {
     name: 'Baklawa',
     description: 'Layered pastry with almonds and honey, flavored with orange blossom water',
-    imageSrc: '/images/baklawa.jpg',
+    imageSrc: '/images/baklawa.avif',
     category: 'Algerian',
   },
   {
@@ -65,19 +65,19 @@ const products = [
   {
     name: 'Chocolate Cake',
     description: 'Rich chocolate cake with chocolate ganache and decoration',
-    imageSrc: '/images/birthday-cake.jpg',
+    imageSrc: '/images/chocolat-cake.jpeg',
     category: 'Birthday',
   },
   {
     name: 'Red Velvet Cake',
     description: 'Red velvet cake with cream cheese frosting and personalized decoration',
-    imageSrc: '/images/red-velvet.jpg',
+    imageSrc: '/images/red-velvet.webp',
     category: 'Birthday',
   },
   {
     name: 'Number Cake',
     description: 'Custom cake shaped as numbers or letters, decorated with fresh fruits and flowers',
-    imageSrc: '/images/number-cake.jpg',
+    imageSrc: '/images/birthday-cake.jpg',
     category: 'Birthday',
   },
   {

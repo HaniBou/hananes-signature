@@ -3,6 +3,7 @@ import { Playfair_Display, Montserrat, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import "./fonts.css";
 
+
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],

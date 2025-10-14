@@ -8,19 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'gold': {
-          light: 'var(--gold-light)',
-          DEFAULT: 'var(--gold)',
-          dark: 'var(--gold-dark)',
-        },
-        'brown': {
-          light: 'var(--brown-light)',
-          DEFAULT: 'var(--brown)',
-          dark: 'var(--brown-dark)',
-        },
-        'cream': 'var(--cream)',
-        'black': 'var(--black)',
-      },
+          'gold': { light: 'var(--gold-light)', DEFAULT: 'var(--gold)', dark: 'var(--gold-dark)' },
+          'brown': { light: 'var(--brown-light)', DEFAULT: 'var(--brown)', dark: 'var(--brown-dark)' },
+          'cream': 'var(--cream)',
+          'black': 'var(--black)',
+          },
       fontFamily: {
         'serif': ['var(--font-playfair)', 'Playfair Display', 'serif'],
         'sans': ['var(--font-montserrat)', 'Montserrat', 'sans-serif'],

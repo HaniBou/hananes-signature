@@ -88,7 +88,7 @@ export default function Home() {
                 centered={false}
               />
               
-              <p className="text-brown-light">
+              <p className="text-gold text-lg">
                 Hanane&apos;s Signature was born from a deep passion for the art of traditional Algerian and French pastry. Founded by Hanane, who has been passionate about cooking since her early years, our bakery combines ancestral know-how and modern techniques to offer you exceptional creations.
               </p>
               

@@ -53,7 +53,7 @@ export default function About() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/about-story.jpg"
+                  src="/images/about-story.webp"
                   alt="The story of Hanane's Signature"
                   fill
                   className="object-cover"
