@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -39,9 +39,10 @@ const SimpleImageSlider = ({
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full"
         >
-          <img
+          <Image
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
+            fill
             className="w-full h-full object-cover"
           />
           
