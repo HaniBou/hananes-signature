@@ -27,9 +27,10 @@ export default function Contact() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl font-serif mb-6">Contact Us</h1>
-            <p className="text-lg text-cream/80">
-              A question, a special order, or a quote? Don't hesitate to contact us, we'll be delighted to discuss with you.
-            </p>
+           <p className="text-lg text-cream/80">
+            A question, a special order, or a quote ? Don&apos;t hesitate to contact us, we&apos;ll be delighted to discuss with you.
+          </p>
+
           </motion.div>
         </div>
       </section>

@@ -186,7 +186,7 @@ export default function Creations() {
             />
             
             <p className="mt-8 mb-10 text-cream/90">
-              Whether it's for a birthday, wedding, professional event, or any other celebration, our pastries will make your moment unforgettable. Contact us to discuss your project!
+              Whether it&apos;s for a birthday, wedding, professional event, or any other celebration, our pastries will make your moment unforgettable. Contact us to discuss your project!
             </p>
             
             <a

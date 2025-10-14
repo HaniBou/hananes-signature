@@ -89,7 +89,7 @@ export default function Home() {
               />
               
               <p className="text-brown-light">
-                Hanane's Signature was born from a deep passion for the art of traditional Algerian and French pastry. Founded by Hanane, who has been passionate about cooking since her early years, our bakery combines ancestral know-how and modern techniques to offer you exceptional creations.
+                Hanane&apos;s Signature was born from a deep passion for the art of traditional Algerian and French pastry. Founded by Hanane, who has been passionate about cooking since her early years, our bakery combines ancestral know-how and modern techniques to offer you exceptional creations.
               </p>
               
               <p className="text-brown-light">
@@ -155,13 +155,32 @@ export default function Home() {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((item) => (
+            {[
+              {
+                text: "The pastries from Hanane's Signature are truly exceptional! Everything was delicious and beautifully presented. My guests were impressed.",
+                name: "Sarah L.",
+                service: "Birthday Cake",
+                initial: "S"
+              },
+              {
+                text: "Incredible quality and authentic flavors! The traditional Algerian pastries reminded me of my grandmother's recipes. Simply perfect!",
+                name: "Mohammed R.",
+                service: "Wedding Assortment",
+                initial: "M"
+              },
+              {
+                text: "Professional service and exquisite taste. Our corporate event was a huge success thanks to these amazing pastries. Highly recommended!",
+                name: "Lucy D.",
+                service: "Corporate Order",
+                initial: "L"
+              }
+            ].map((testimonial, index) => (
               <motion.div
-                key={item}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: item * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white p-6 rounded-lg shadow-md border border-gold/20"
               >
                 <div className="flex items-center mb-4">
@@ -172,18 +191,19 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-brown-dark mb-4">
-                  "The pastries from Hanane's Signature are truly exceptional! Everything was delicious and beautifully presented. My guests were impressed."
+                 {`"${testimonial.text}"`}
+                   
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-brown-dark font-semibold mr-3">
-                    {item === 1 ? 'S' : item === 2 ? 'M' : 'L'}
+                    {testimonial.initial}
                   </div>
                   <div>
                     <h4 className="font-medium text-gold">
-                      {item === 1 ? 'Sarah L.' : item === 2 ? 'Mohammed R.' : 'Lucy D.'}
+                      {testimonial.name}
                     </h4>
                     <p className="text-sm text-cream/80">
-                      {item === 1 ? 'Birthday Cake' : item === 2 ? 'Wedding Assortment' : 'Corporate Order'}
+                      {testimonial.service}
                     </p>
                   </div>
                 </div>
