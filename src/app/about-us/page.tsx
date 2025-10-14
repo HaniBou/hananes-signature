@@ -34,7 +34,7 @@ export default function About() {
           >
             <h1 className="text-4xl md:text-5xl font-serif mb-6">About Us</h1>
             <p className="text-lg text-cream/80">
-              Discover the story and passion behind Hanane's Signature, an artisanal pastry shop that celebrates the richness of Algerian and French culinary traditions.
+              Discover the story and passion behind Hanane&apos;s Signature, an artisanal pastry shop that celebrates the richness of Algerian and French culinary traditions.
             </p>
           </motion.div>
         </div>
@@ -76,11 +76,11 @@ export default function About() {
               />
               
               <p className="text-brown-light">
-                Hanane's Signature was born from a deep passion for traditional pastry making. It all began in a family kitchen, where Hanane learned the secrets of traditional recipes passed down through generations.
+                Hanane&apos;s Signature was born from a deep passion for traditional pastry making. It all began in a family kitchen, where Hanane learned the secrets of traditional recipes passed down through generations.
               </p>
               
               <p className="text-brown-light">
-                Today, Hanane's Signature is recognized for the exceptional quality of its creations, combining authentic traditional flavors with refined presentation. Each pastry tells a story, one of a rich and vibrant culinary heritage.
+                Today, Hanane&apos;s Signature is recognized for the exceptional quality of its creations, combining authentic traditional flavors with refined presentation. Each pastry tells a story, one of a rich and vibrant culinary heritage.
               </p>
             </motion.div>
           </div>
@@ -118,7 +118,7 @@ export default function About() {
               </p>
               
               <p className="text-cream/80">
-                At Hanane's Signature, we are committed to:
+                At Hanane&apos;s Signature, we are committed to:
               </p>
               
               <ul className="space-y-2 pl-5">
@@ -252,17 +252,18 @@ export default function About() {
               />
               
               <p className="text-brown-light">
-                Hanane, the founder and pastry chef of Hanane's Signature, has always been passionate about the art of pastry making. Born into a family where cooking was a true celebration, she learned from an early age the importance of authentic flavors and quality ingredients.
+                Hanane, the founder and pastry chef of Hanane&apos;s Signature, has always been passionate about the art of pastry making. Born into a family where cooking was a true celebration, she learned from an early age the importance of authentic flavors and quality ingredients.
               </p>
               
               <p className="text-brown-light">
-                After years spent perfecting her techniques and exploring traditional recipes, Hanane decided to share her passion with the world by opening Hanane's Signature. Her vision: to create pastries that not only delight the taste buds but also tell a story and create emotions.
+                After years spent perfecting her techniques and exploring traditional recipes, Hanane decided to share her passion with the world by opening Hanane&apos;s Signature. Her vision: to create pastries that not only delight the taste buds but also tell a story and create emotions.
               </p>
               
               <p className="text-brown-light font-medium italic mt-6">
-                "I believe that pastry is an art that speaks to all the senses. Each creation is a unique piece that reflects my passion and my heritage."
+                {`"I believe that pastry is an art that speaks to all the senses. Each creation is a unique piece that reflects my passion and my heritage."`}
               </p>
               <p className="text-right text-brown">- Hanane</p>
+
             </motion.div>
           </div>
         </div>
