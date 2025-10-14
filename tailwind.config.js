@@ -9,16 +9,17 @@ module.exports = {
     extend: {
       colors: {
         'gold': {
-          light: '#f0e6cc',
-          DEFAULT: '#d4af37',
-          dark: '#b8860b',
+          light: 'var(--gold-light)',
+          DEFAULT: 'var(--gold)',
+          dark: 'var(--gold-dark)',
         },
         'brown': {
-          light: '#8d6e63',
-          DEFAULT: '#5d4037',
-          dark: '#3e2723',
+          light: 'var(--brown-light)',
+          DEFAULT: 'var(--brown)',
+          dark: 'var(--brown-dark)',
         },
-        'cream': '#f8f4e8',
+        'cream': 'var(--cream)',
+        'black': 'var(--black)',
       },
       fontFamily: {
         'serif': ['var(--font-playfair)', 'Playfair Display', 'serif'],

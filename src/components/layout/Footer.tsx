@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <h3 className="font-serif text-2xl text-gold">Hanane's Signature</h3>
+            <h3 className="font-serif text-2xl text-gold">Hanane&apos;s Signature</h3>
             <p className="text-cream/80">
               Authentic artisanal pastries, created with passion and expertise.
             </p>
@@ -97,7 +97,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-cream/20 mt-8 pt-6 text-center text-cream/70">
-          <p>© {currentYear} Hanane's Signature. All rights reserved.</p>
+          <p>© {currentYear} Hanane&apos;s Signature. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -60,7 +60,7 @@ export default function Contact() {
                 titleColor="text-gold"
               />
               
-              <div className="bg-brown-dark/50 p-6 rounded-lg shadow-md space-y-6 border border-gold/20">
+              <div className="bg-brown p-6 rounded-lg shadow-md space-y-6 border border-gold/20">
                 <div className="flex items-start gap-4">
                   <div className="bg-gold p-3 rounded-full">
                     <FaMapMarkerAlt className="text-brown-dark text-xl" />
@@ -68,7 +68,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Address</h3>
                     <p className="text-cream">
-                      8 Rue des Gourmandises<br />
+                      3 Rue de la Corderie<br />
                       69003 Lyon, France
                     </p>
                   </div>
@@ -117,7 +117,7 @@ export default function Contact() {
               <div className="bg-white p-4 rounded-lg shadow-md">
                 <div className="aspect-video w-full rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.2751865751674!2d4.8513336762119545!3d45.7600646147478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea639f8c79cf%3A0xcb1760e73adcca36!2s3e%20Arrondissement%20de%20Lyon%2C%2069003%20Lyon!5e0!3m2!1sfr!2sfr!4v1696682345237!5m2!1sfr!2sfr"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.7215828226294!2d4.804340074348893!3d45.77676971253196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb2d97bbb493%3A0x8e2f61ad598705f6!2s3%20Rue%20de%20la%20Corderie%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1760047780765!5m2!1sfr!2sfr"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

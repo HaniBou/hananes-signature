@@ -98,7 +98,7 @@ export default function Home() {
               
               <Link
                 href="/about-us"
-                className="inline-block mt-4 px-6 py-3 border-2 border-gold text-gold hover:bg-gold hover:text-brown-dark font-medium transition-all duration-300 rounded-lg shadow-md hover:shadow-lg"
+                className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
               >
                 Learn more about us →
               </Link>
@@ -210,7 +210,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
             >
               Contact Us
             </Link>

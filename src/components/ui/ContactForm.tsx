@@ -81,7 +81,7 @@ const ContactForm = () => {
           <p className="text-brown mb-6">We will respond to you as soon as possible.</p>
           <button
             onClick={() => setSubmitted(false)}
-            className="px-6 py-2 bg-brown-dark text-cream rounded-lg border-2 border-gold hover:bg-gold hover:text-brown-dark transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
+            className="bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
           >
             New message
           </button>
@@ -181,10 +181,10 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={submitting}
-              className={`px-8 py-3 rounded-lg border-2 shadow-lg transition-all duration-300 ${
+              className={`transition-all duration-300 cursor-pointer ${
                 submitting
-                  ? 'bg-brown-light text-cream/70 cursor-not-allowed border-brown-light'
-                  : 'bg-brown-dark text-cream hover:bg-gold hover:text-brown-dark border-gold hover:shadow-xl cursor-pointer'
+                  ? 'bg-brown-light text-cream/70 cursor-not-allowed border-brown-light px-8 py-3 rounded-lg border-2 shadow-lg'
+                  : 'bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105'
               }`}
             >
               {submitting ? 'Sending...' : 'Send'}

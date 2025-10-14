@@ -4,8 +4,9 @@
   --gold-light: #f0e6cc;
   --gold: #d4af37;
   --gold-dark: #b8860b;
+  --gold-transparent: rgba(212, 175, 55, 0.1);
   --black: #000000;
-  --brown-light: #c08552;
+  --brown-light: #8d6e63;
   --brown: #5d4037;
   --brown-dark: #3e2723;
   --cream: #f8f4e8;
@@ -21,7 +22,7 @@ body {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background-image: url('/images/main-background.png');
+  background-image: url('/images/my-background2.png');
   background-size: 100% auto;
   background-position: top center;
   background-repeat: repeat;

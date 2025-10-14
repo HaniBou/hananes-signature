@@ -130,7 +130,7 @@ export default function Creations() {
             {categories.map((category) => (
               <button
                 key={category}
-                className={`px-6 py-2 rounded-full transition-all duration-300 font-medium border-2 shadow-md hover:shadow-lg transform hover:scale-105 cursor-pointer ${
+                className={`px-6 py-2 rounded-full transition-all duration-300 font-medium border-2 shadow-md hover:shadow-xl transform hover:scale-105 cursor-pointer ${
                   activeFilter === category 
                     ? 'bg-gold text-brown-dark border-gold-dark hover:bg-gold-dark' 
                     : 'bg-brown-light/10 hover:bg-brown-light/20 text-brown-dark border-brown-light/30 hover:border-gold/50'

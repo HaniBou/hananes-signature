@@ -34,7 +34,10 @@ export const sendEmail = async (formData: {
     );
 
     return { success: true, response };
-  } catch (error: any) {
-    return { success: false, error: error.message || 'Erreur lors de l\'envoi' };
-  }
+  } catch (error) {
+  const errorMessage =
+    error instanceof Error ? error.message : 'Erreur lors de l\'envoi';
+
+  return { success: false, error: errorMessage };
+}
 };
