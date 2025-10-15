@@ -32,16 +32,19 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-serif mb-6">About Us</h1>
-            <p className="text-lg text-cream/80">
-              Discover the story and passion behind Hanane&apos;s Signature, an artisanal pastry shop that celebrates the richness of Algerian and French culinary traditions.
-            </p>
+            <SectionTitle 
+              title="About Us"
+              subtitle="Discover the story and passion behind Hanane&apos;s Signature, an artisanal pastry shop that celebrates the richness of Algerian and French culinary traditions."
+              titleColor="text-cream"
+              subtitleColor="text-cream/80"
+              underlineColor="bg-gold"
+            />
           </motion.div>
         </div>
       </section>
       
       {/* Our Story Section */}
-      <section className="py-16 bg-cream">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div 
@@ -73,13 +76,14 @@ export default function About() {
               <SectionTitle 
                 title="Our Story" 
                 centered={false}
+                underlineColor='bg-gold'
               />
               
-              <p className="text-brown-light">
+              <p className="text-black">
                 Hanane&apos;s Signature was born from a deep passion for traditional pastry making. It all began in a family kitchen, where Hanane learned the secrets of traditional recipes passed down through generations.
               </p>
               
-              <p className="text-brown-light">
+              <p className="text-black">
                 Today, Hanane&apos;s Signature is recognized for the exceptional quality of its creations, combining authentic traditional flavors with refined presentation. Each pastry tells a story, one of a rich and vibrant culinary heritage.
               </p>
             </motion.div>
@@ -88,8 +92,8 @@ export default function About() {
       </section>
       
       {/* Our Vision Section */}
-      <section className="py-16 bg-brown-dark text-cream relative" style={{
-        backgroundImage: `url('/images/pattern-dark.svg')`,
+      <section className="py-16 relative" style={{
+        backgroundImage: `url('')`,
         backgroundSize: '200px',
         backgroundPosition: 'center'
       }}>
@@ -106,22 +110,23 @@ export default function About() {
               <SectionTitle 
                 title="Our Vision" 
                 centered={false}
-                className="text-cream"
+                className="text-brown"
+                underlineColor='bg-gold'
               />
               
-              <p className="text-cream/80">
+              <p className="text-black">
                 Our vision is to preserve and celebrate the richness of Algerian and French pastry traditions while reinventing them with a contemporary touch.
               </p>
               
-              <p className="text-cream/80">
+              <p className="text-black">
                 We believe that each pastry should be a complete sensory experience, from the first visual impression to the last flavor note.
               </p>
               
-              <p className="text-cream/80">
+              <p className="text-black">
                 At Hanane&apos;s Signature, we are committed to:
               </p>
               
-              <ul className="space-y-2 pl-5">
+              <ul className="space-y-2 pl-5 text-black">
                 {[
                   'Using ingredients of the highest quality',
                   'Respecting traditional preparation methods',
@@ -160,13 +165,14 @@ export default function About() {
       </section>
       
       {/* Our Values Section */}
-      <section className="py-16 bg-brown-dark">
+      <section className="py-16 bg-brown-light/20">
         <div className="container mx-auto px-4">
           <SectionTitle 
             title="Our Values" 
             subtitle="The principles that guide our work every day"
-            titleColor="text-gold"
-            subtitleColor="text-cream"
+            titleColor="text-brown"
+            subtitleColor="text-black"
+            underlineColor='bg-gold'
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -205,7 +211,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-brown-dark/50 p-6 rounded-lg shadow-md text-center border border-gold/20"
+                className="bg-brown p-6 rounded-lg shadow-md text-center border border-gold"
               >
                 <div className="flex justify-center mb-4">
                   {value.icon}
@@ -247,22 +253,24 @@ export default function About() {
               className="space-y-6"
             >
               <SectionTitle 
-                title="Meet Hanane" 
+                title="Meet Hanane"
+                className='text-brown'
                 centered={false}
+                underlineColor='bg-gold'
               />
               
-              <p className="text-brown-light">
+              <p className="text-black">
                 Hanane, the founder and pastry chef of Hanane&apos;s Signature, has always been passionate about the art of pastry making. Born into a family where cooking was a true celebration, she learned from an early age the importance of authentic flavors and quality ingredients.
               </p>
-              
-              <p className="text-brown-light">
+
+              <p className="text-black">
                 After years spent perfecting her techniques and exploring traditional recipes, Hanane decided to share her passion with the world by opening Hanane&apos;s Signature. Her vision: to create pastries that not only delight the taste buds but also tell a story and create emotions.
               </p>
-              
-              <p className="text-brown-light font-medium italic mt-6">
+
+              <p className="text-black font-medium italic mt-6">
                 {`"I believe that pastry is an art that speaks to all the senses. Each creation is a unique piece that reflects my passion and my heritage."`}
               </p>
-              <p className="text-right text-brown">- Hanane</p>
+              <p className="text-right text-black">- Hanane</p>
 
             </motion.div>
           </div>

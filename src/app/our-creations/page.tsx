@@ -115,10 +115,13 @@ export default function Creations() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-serif mb-6">Our Creations</h1>
-            <p className="text-lg text-cream/80">
-              Discover our selection of authentic pastries, made with passion and tradition for your greatest pleasure.
-            </p>
+            <SectionTitle 
+              title="Our Creations"
+              subtitle="Discover our selection of authentic pastries, made with passion and tradition for your greatest pleasure."
+              titleColor="text-cream"
+              subtitleColor="text-cream/80"
+              underlineColor="bg-gold"
+            />
           </motion.div>
         </div>
       </section>
@@ -145,7 +148,7 @@ export default function Creations() {
       </section>
       
       {/* Products Grid */}
-      <section className="py-16 bg-cream">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <AnimatePresence>

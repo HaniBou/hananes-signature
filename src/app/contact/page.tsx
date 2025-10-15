@@ -14,7 +14,7 @@ export default function Contact() {
       
       {/* Hero Section */}
       <section className="pt-44 pb-16 bg-brown-dark text-cream relative" style={{
-        backgroundImage: `url('/images/banner-1.jpg')`,
+        // backgroundImage: `url('/images/contact-banner.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
@@ -58,7 +58,8 @@ export default function Contact() {
               <SectionTitle 
                 title="Our Contact Information" 
                 centered={false}
-                titleColor="text-gold"
+                titleColor="text-brown"
+                underlineColor='bg-gold'
               />
               
               <div className="bg-brown p-6 rounded-lg shadow-md space-y-6 border border-gold/20">
@@ -134,8 +135,8 @@ export default function Contact() {
       </section>
       
       {/* FAQ Section */}
-            <section className="py-16 bg-brown-dark relative" style={{
-        backgroundImage: `url('/images/faq-bg.svg')`,
+            <section className="py-16 relative" style={{
+        // backgroundImage: `url('/images/faq-bg.svg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
@@ -144,8 +145,9 @@ export default function Contact() {
           <SectionTitle 
             title="Frequently Asked Questions" 
             subtitle="Answers to questions you might be asking"
-            titleColor="text-gold"
-            subtitleColor="text-cream"
+            titleColor="text-brown"
+            subtitleColor="text-black"
+            underlineColor='bg-gold'
           />
           
           <div className="max-w-3xl mx-auto mt-12 space-y-6">
@@ -173,7 +175,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-brown-dark/50 p-6 rounded-lg shadow-md border border-gold/20"
+                className="bg-brown-dark p-6 rounded-lg shadow-md border border-gold/20"
               >
                 <h3 className="font-serif text-xl text-gold mb-3">{faq.question}</h3>
                 <p className="text-cream">{faq.answer}</p>

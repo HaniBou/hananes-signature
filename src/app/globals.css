@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 :root {
   --gold-light: #f0e6cc;
   --gold: #d4af37;
@@ -7,7 +8,7 @@
   --black: #000000;
   --brown-light: #8d6e63;
   --brown: #5d4037;
-  --brown-dark: #3e2723;
+  --brown-dark: #5d4037;
   --cream: #f8f4e8;
 }
 
@@ -25,4 +26,71 @@ body {
   background-size: 100% auto;
   background-position: top center;
   background-repeat: repeat;
+  color: var(--brown);
+}
+
+/* Classes de couleur de texte explicites */
+.text-gold { color: var(--gold) !important; }
+.text-gold-light { color: var(--gold-light) !important; }
+.text-gold-dark { color: var(--gold-dark) !important; }
+.text-brown { color: var(--brown) !important; }
+.text-brown-light { color: var(--brown-light) !important; }
+.text-brown-dark { color: var(--brown-dark) !important; }
+.text-cream { color: var(--cream) !important; }
+.text-black { color: var(--black) !important; }
+
+/* Classes de couleur de fond explicites */
+.bg-gold { background-color: var(--gold) !important; }
+.bg-gold-light { background-color: var(--gold-light) !important; }
+.bg-gold-dark { background-color: var(--gold-dark) !important; }
+.bg-brown { background-color: var(--brown) !important; }
+.bg-brown-light { background-color: var(--brown-light) !important; }
+.bg-brown-dark { background-color: var(--brown-dark) !important; }
+.bg-cream { background-color: var(--cream) !important; }
+.bg-black { background-color: var(--black) !important; }
+
+/* Style des bordures dorées pour les inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+  border-color: var(--gold) !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 2px var(--gold-light) !important;
+}
+
+/* Styles spécifiques pour les bordures dorées */
+.border-gold {
+  border-color: var(--gold) !important;
+}
+
+.border-gold-dark {
+  border-color: var(--gold-dark) !important;
+}
+
+/* Styles pour les cartes produit */
+.product-card {
+  border: 2px solid var(--gold) !important;
+}
+
+/* Forcer les bordures sur tous les éléments importants */
+.border, .border-2, .border-4 {
+  border-style: solid;
+}
+
+/* Style global pour rendre toutes les bordures dorées plus visibles */
+[class*="border-gold"] {
+  border-color: #d4af37 !important;
+  border-style: solid;
+  border-width: 2px !important;
 }

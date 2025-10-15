@@ -13,25 +13,25 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <h3 className="font-serif text-2xl text-gold">Hanane&apos;s Signature</h3>
-            <p className="text-cream/80">
+            <p className="text-black">
               Authentic artisanal pastries, created with passion and expertise.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a
+                <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cream hover:text-gold transition-colors duration-200"
-              >
-                <FaFacebook size={24} />
-              </a>
+                >
+                <FaFacebook size={40} color="brown" /> {/* Exemple: or */}
+                </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cream hover:text-gold transition-colors duration-200"
               >
-                <FaInstagram size={24} />
+                <FaInstagram size={40} color="brown" />
               </a>
             </div>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="font-serif text-xl text-gold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-black">
               {[
                 { title: 'Home', href: '/' },
                 { title: 'About Us', href: '/about-us' },
@@ -61,7 +61,7 @@ const Footer = () => {
           {/* Categories */}
           <div>
             <h4 className="font-serif text-xl text-gold mb-4">Our Specialties</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-black">
               {[
                 'Algerian Pastries',
                 'French Pastries',
@@ -78,7 +78,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="font-serif text-xl text-gold mb-4">Contact</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-black">
               <li className="flex items-center gap-3">
                 <FaPhone className="text-gold" />
                 <span>+33 01 23 45 67 89</span>
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-cream/20 mt-8 pt-6 text-center text-cream/70">
+        <div className="border-t border-cream/20 mt-8 pt-6 text-center text-black text-sm">
           <p>© {currentYear} Hanane&apos;s Signature. All rights reserved.</p>
         </div>
       </div>

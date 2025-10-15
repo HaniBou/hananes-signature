@@ -26,7 +26,7 @@ const featuredProducts = [
   },
   {
     name: 'Mille-feuille',
-    description: 'Classic French pastry made of thin layers of puff pastry and vanilla custard cream',
+    description: 'Classic French pastry made of thin layers of puff pastry and vanilla custard brown',
     imageSrc: '/images/millefeuille.jpg',
     category: 'French',
   },
@@ -55,7 +55,7 @@ export default function Home() {
       </section>
       
       {/* À Propos Section */}
-      <section className="py-20 bg-cream">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -64,7 +64,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg border-2 border-gold">
                 <Image
                   src="/images/about.jpg"
                   alt="Hanane's Signature - About Us"
@@ -86,19 +86,21 @@ export default function Home() {
               <SectionTitle 
                 title="Our Story" 
                 centered={false}
+                titleColor="text-brown-dark"
+                underlineColor="bg-gold"
               />
               
-              <p className="text-gold text-lg">
+              <p className="text-black">
                 Hanane&apos;s Signature was born from a deep passion for the art of traditional Algerian and French pastry. Founded by Hanane, who has been passionate about cooking since her early years, our bakery combines ancestral know-how and modern techniques to offer you exceptional creations.
               </p>
-              
-              <p className="text-brown-light">
+
+              <p className="text-black">
                 Each pastry is prepared with love and attention to detail, using only premium ingredients to ensure an unforgettable taste experience.
               </p>
               
               <Link
                 href="/about-us"
-                className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
+                className="inline-block bg-brown hover:bg-brown-dark text-gold px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
               >
                 Learn more about us →
               </Link>
@@ -108,12 +110,13 @@ export default function Home() {
       </section>
       
       {/* Our Creations Section */}
-      <section className="py-20 text-cream">
+      <section className="py-20 text-brown">
         <div className="container mx-auto px-4">
           <SectionTitle 
             title="Our Creations" 
             subtitle="Discover our selection of artisanal pastries, prepared with passion and expertise"
-            className="text-cream"
+            className="text-brown"
+            underlineColor="bg-gold"
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -131,7 +134,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/our-creations"
-              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-block bg-brown hover:bg-gold-dark text-gold px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               View all our creations
             </Link>
@@ -150,8 +153,9 @@ export default function Home() {
           <SectionTitle 
             title="What Our Customers Say" 
             subtitle="Satisfied clients who have enjoyed our pastries for their special events"
-            titleColor="text-gold"
-            subtitleColor="text-cream"
+            titleColor="text-dark-brown"
+            subtitleColor="text-black"
+            underlineColor="bg-gold"
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -181,7 +185,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-md border border-gold/20"
+                className="bg-brown p-6 rounded-lg shadow-md border-2 border-gold"
               >
                 <div className="flex items-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -190,7 +194,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-brown-dark mb-4">
+                <p className="text-cream mb-4">
                  {`"${testimonial.text}"`}
                    
                 </p>
@@ -202,7 +206,7 @@ export default function Home() {
                     <h4 className="font-medium text-gold">
                       {testimonial.name}
                     </h4>
-                    <p className="text-sm text-cream/80">
+                    <p className="text-sm text-gold">
                       {testimonial.service}
                     </p>
                   </div>
@@ -214,26 +218,29 @@ export default function Home() {
       </section>
       
       {/* Contact CTA Section */}
-      <section className="py-20 text-cream relative" style={{
-        backgroundImage: `url('/images/cta-bg.svg')`,
+      <section className="py-20 text-brown relative" style={{
+        backgroundImage: ``,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
         <div className="absolute inset-0"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif mb-6">
-              Ready to order a delicious creation?
-            </h2>
-            <p className="mb-8 text-cream/80 text-lg">
-              Contact us to discuss your project and create pastries together that will delight your guests.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
-            >
-              Contact Us
-            </Link>
+            <SectionTitle 
+              title="Ready to order a delicious creation?"
+              subtitle="Contact us to discuss your project and create pastries together that will delight your guests."
+              titleColor="text-brown"
+              subtitleColor="text-black"
+              underlineColor="bg-gold"
+            />
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="inline-block bg-brown hover:bg-gold-dark text-gold px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
         

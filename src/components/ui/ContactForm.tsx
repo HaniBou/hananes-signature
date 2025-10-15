@@ -56,7 +56,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-cream p-6 rounded-lg shadow-lg">
+    <div className=" p-6 rounded-lg shadow-lg">
       {submitted ? (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -77,18 +77,18 @@ const ContactForm = () => {
               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" 
             />
           </svg>
-          <h3 className="text-2xl font-serif text-brown-dark mb-2">Message sent!</h3>
-          <p className="text-brown mb-6">We will respond to you as soon as possible.</p>
+          <h3 className="text-2xl font-serif text-black mb-2">Message sent!</h3>
+          <p className="text-black mb-6">We will respond to you as soon as possible.</p>
           <button
             onClick={() => setSubmitted(false)}
-            className="bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
+            className="bg-gold hover:bg-gold-dark text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
           >
             New message
           </button>
         </motion.div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <h2 className="text-2xl font-serif text-brown-dark text-center mb-6">Contact Us</h2>
+          <h2 className="text-2xl font-serif text-black text-center mb-6">Contact Us</h2>
           
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
@@ -98,7 +98,7 @@ const ContactForm = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-brown-dark mb-1">
+              <label htmlFor="name" className="block text-black mb-1">
                 Full Name
               </label>
               <input
@@ -108,12 +108,12 @@ const ContactForm = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-brown-light/30 rounded focus:outline-none focus:ring-2 focus:ring-gold-light focus:border-transparent"
+                className="w-full px-4 py-2 border border-gold rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-brown-dark mb-1">
+              <label htmlFor="email" className="block text-black mb-1">
                 Email Address
               </label>
               <input
@@ -128,7 +128,7 @@ const ContactForm = () => {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-brown-dark mb-1">
+              <label htmlFor="phone" className="block text-black mb-1">
                 Phone
               </label>
               <input
@@ -142,7 +142,7 @@ const ContactForm = () => {
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-brown-dark mb-1">
+              <label htmlFor="subject" className="block text-black mb-1">
                 Subject
               </label>
               <select
@@ -163,7 +163,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-brown-dark mb-1">
+            <label htmlFor="message" className="block text-black mb-1">
               Message
             </label>
             <textarea
@@ -183,8 +183,8 @@ const ContactForm = () => {
               disabled={submitting}
               className={`transition-all duration-300 cursor-pointer ${
                 submitting
-                  ? 'bg-brown-light text-cream/70 cursor-not-allowed border-brown-light px-8 py-3 rounded-lg border-2 shadow-lg'
-                  : 'bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105'
+                  ? 'bg-brown text-cream/70 cursor-not-allowed border-brown-light px-8 py-3 rounded-lg border-2 shadow-lg'
+                  : 'bg-brown hover:bg-gold-dark text-gold px-8 py-3 rounded-lg font-semibold border-2 border-gold hover:border-gold-dark shadow-lg hover:shadow-xl transform hover:scale-105'
               }`}
             >
               {submitting ? 'Sending...' : 'Send'}

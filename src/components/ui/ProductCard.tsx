@@ -17,7 +17,7 @@ const ProductCard = ({ name, description, imageSrc, category }: ProductCardProps
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-transparent hover:border-transparent"
+      className="bg-brown rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gold hover:border-gold-dark"
     >
       <div className="relative h-60">
         <Image
@@ -31,7 +31,7 @@ const ProductCard = ({ name, description, imageSrc, category }: ProductCardProps
       </div>
       <div className="p-5">
         <h3 className="font-serif text-xl text-gold mb-2">{name}</h3>
-        <p className="text-brown-dark text-sm">{description}</p>
+        <p className="text-cream text-sm">{description}</p>
       </div>
     </motion.div>
   );
