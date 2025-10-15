@@ -89,7 +89,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-gold mt-1" />
-                <span>8 Rue des Gourmandises<br />69003 Lyon, France</span>
+                <span>3 Rue de la Corderie<br />69009 Lyon, France</span>
               </li>
             </ul>
           </div>
