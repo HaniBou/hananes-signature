@@ -26,7 +26,7 @@ const Footer = () => {
                 <FaFacebook size={40} color="brown" /> {/* Exemple: or */}
                 </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/hananestastyflavors/?hl=fr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cream hover:text-gold transition-colors duration-200"
