@@ -184,8 +184,9 @@ export default function Creations() {
             <SectionTitle 
               title="Custom Orders" 
               subtitle="You have a special event to celebrate? Hanane's Signature creates custom pastries to perfectly match your desires and occasion."
-              titleColor="text-gold"
+              titleColor="text-cream"
               subtitleColor="text-cream"
+              underlineColor='bg-gold'
             />
             
             <p className="mt-8 mb-10 text-cream/90">

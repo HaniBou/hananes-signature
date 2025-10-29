@@ -236,7 +236,7 @@ export default function About() {
             >
               <div className="relative h-[400px] w-[400px] mx-auto rounded-full overflow-hidden border-8 border-gold-light shadow-xl">
                 <Image
-                  src="/images/hanane-portrait.jpg"
+                  src="/images/hanane-portrait.png"
                   alt="Hanane - Founder"
                   fill
                   className="object-cover"

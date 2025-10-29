@@ -1,7 +1,0 @@
-<!-- Placeholder SVG for Hanane portrait -->
-<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="600" height="600" fill="#b8860b"/>
-  <circle cx="300" cy="300" r="200" fill="#f0e6cc"/>
-  <text x="300" y="300" font-family="Arial" font-size="30" fill="#3e2723" text-anchor="middle">Hanane</text>
-  <text x="300" y="340" font-family="Arial" font-size="20" fill="#3e2723" text-anchor="middle">Fondatrice</text>
-</svg>

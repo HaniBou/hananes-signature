@@ -13,10 +13,10 @@ interface ProductCardProps {
 const ProductCard = ({ name, description, imageSrc, category }: ProductCardProps) => {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ y: 20 }}
+      whileInView={{ y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className="bg-brown rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gold hover:border-gold-dark"
     >
       <div className="relative h-60">

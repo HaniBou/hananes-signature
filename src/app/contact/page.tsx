@@ -26,10 +26,13 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-serif mb-6">Contact Us</h1>
-           <p className="text-lg text-cream/80">
-            A question, a special order, or a quote ? Don&apos;t hesitate to contact us, we&apos;ll be delighted to discuss with you.
-          </p>
+            <SectionTitle 
+              title="Contact Us"
+              subtitle="A question, a special order, or a quote ? Don&apos;t hesitate to contact us, we&apos;ll be delighted to discuss with you."
+              titleColor="text-cream"
+              subtitleColor="text-cream/80"
+              underlineColor="bg-gold"
+            />
 
           </motion.div>
         </div>

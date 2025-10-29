@@ -45,17 +45,17 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center">
-            <Image
-              src="/images/mon-logo.png"
-              alt="Hanane's Signature"
-              width={802}        // largeur réelle de ton image
-              height={241}       // hauteur réelle de ton image
-              quality={100}      // pour éviter la compression floue
-              className="h-auto w-[300px] object-contain bg-cream/90 p-1 rounded-sm"
-            />
-            </Link>
-            
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/new-logo3.png"
+            alt="Hanane's Signature"
+            width={200} // taille affichée (ex: 120px)
+            height={200} // taille affichée (ex: 120px)
+            quality={100} // meilleure qualité, moins de flou
+            className="h-auto w-[100px] object-contain bg-cream/90 p-1 rounded-sm"
+            priority // charge l'image rapidement
+          />
+        </Link>
             {/* Titre Hanane's Signature
             <div className="hidden lg:block">
               <h1 className="font-signature text-3xl text-gold">
