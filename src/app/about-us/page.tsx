@@ -234,13 +234,13 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative h-[400px] w-[400px] mx-auto rounded-full overflow-hidden border-8 border-gold-light shadow-xl">
+              <div className="relative h-[350px] w-[350px] mx-auto rounded-full overflow-hidden border-8 border-gold-light shadow-xl">
                 <Image
                   src="/images/hanane-portrait.png"
                   alt="Hanane - Founder"
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover object-bottom"
+                  sizes="(max-width: 768px) 100vw, 350px"
                 />
               </div>
             </motion.div>
