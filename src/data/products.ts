@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   description: string;
-  category: 'Algerian' | 'French' | 'Birthday';
+  category: 'Algerian' | 'French' | 'Custom Cakes';
   images: string[]; // Tableau d'images pour la galerie
   featured?: boolean; // Pour afficher sur la page d'accueil
 }
@@ -41,6 +41,16 @@ export const products: Product[] = [
     ],
   },
   {
+    id: 'ktayef',
+    name: 'Ktayef',
+    description: 'Sweet dumplings filled with nuts and drenched in syrup',
+    category: 'Algerian',
+    images: [
+      '/images/ktayef.png',
+      // Ajoutez d'autres photos ici
+    ],
+  },
+  {
     id: 'griwech',
     name: 'Griwech',
     description: 'Crispy fried pastry coated with honey',
@@ -53,16 +63,51 @@ export const products: Product[] = [
   
   // French Pastries
   {
+    id: 'trompe-l-oeil',
+    name: "Trompe l'œil",
+    description: 'Pastry that looks like a savory dish but is actually sweet',
+    category: 'French',
+    images: [
+      '/images/trompe-loeil-1.png',
+      '/images/trompe-loeil.png',
+      '/images/trompe-loeil-2.png',
+      // Ajoutez d'autres photos ici
+    ],
+  },
+  {
     id: 'mille-feuille',
     name: 'Mille-feuille',
     description: 'Classic French pastry made of thin layers of puff pastry and vanilla custard brown',
     category: 'French',
     images: [
-      '/images/millefeuille.jpg',
+      '/images/mille-feuilles.png',
       // Ajoutez plusieurs photos de mille-feuille ici
       // Exemple: '/images/millefeuille-2.jpg', '/images/millefeuille-3.jpg'
     ],
     featured: true,
+  },
+  {
+    id:'petit-four',
+    name: 'Petit Four',
+    description: 'Assorted small pastries often served at the end of a meal or with tea',
+    category: 'French',
+    images: [
+      '/images/petits-fours.png',
+      // Ajoutez d'autres photos ici
+    ],
+  },
+  {
+    id: 'entremet',
+    name: 'Entremet',
+    description: 'Elegant multi-layered dessert with various textures and flavors, often decorated beautifully',
+    category: 'French',
+    images: [
+      '/images/entremet-3.png',
+      '/images/entremet-caramel.png',
+      '/images/entremet-chocolat.png',
+      '/images/entremet-fraise.png',
+      // Ajoutez d'autres photos ici
+    ],
   },
   {
     id: 'tarte-fruits',
@@ -70,7 +115,7 @@ export const products: Product[] = [
     description: 'Tart topped with fresh seasonal fruits on a light custard cream',
     category: 'French',
     images: [
-      '/images/tarte-fruits.jpg',
+      '/images/tartes-fraises.png',
       // Ajoutez d'autres photos ici
     ],
   },
@@ -81,6 +126,8 @@ export const products: Product[] = [
     category: 'French',
     images: [
       '/images/eclair.jpg',
+      '/images/eclairs.png',
+
       // Ajoutez d'autres photos ici
     ],
   },
@@ -94,47 +141,85 @@ export const products: Product[] = [
       // Ajoutez d'autres photos ici
     ],
   },
+  {
+    id: 'cup-cakes', 
+    name: 'Cup Cakes',
+    description: 'Assorted flavored cup cakes with colorful frosting and decorations',
+    category: 'French',
+    images: [
+      '/images/cupcakes.png',
+      '/images/cupcakes-1.png',
+      // Ajoutez d'autres photos ici
+    ],
+  },
+  {
+    id: 'cheesecake',
+    name: 'Cheesecake',
+    description: 'Creamy cheesecake with a graham cracker crust, topped with fresh fruit or sauce',
+    category: 'French',
+    images: [
+      '/images/cheese-cake.png',
+      // Ajoutez d'autres photos ici
+    ],
+  },
+  {
+    id: 'brookies',
+    name: 'Brookies',
+    description: 'Delicious combination of brownies and cookies, perfect for chocolate lovers',
+    category: 'French',
+    images: [
+      '/images/brookie.png',
+      // Ajoutez d'autres photos ici
+    ],
+  },
   
-  // Birthday Cakes
+  // Custom Cakes - Personalized cakes for all occasions
   {
-    id: 'chocolate-cake',
-    name: 'Chocolate Cake',
-    description: 'Rich chocolate cake with chocolate ganache and decoration',
-    category: 'Birthday',
+    id: 'birthday-cake',
+    name: 'Birthday Cake',
+    description: 'Custom birthday cake with your choice of flavors and personalized decorations to celebrate your special day',
+    category: 'Custom Cakes',
     images: [
-      '/images/chocolat-cake.jpeg',
-      // Ajoutez d'autres photos ici
-    ],
-  },
-  {
-    id: 'red-velvet',
-    name: 'Red Velvet Cake',
-    description: 'Red velvet cake with cream cheese frosting and personalized decoration',
-    category: 'Birthday',
-    images: [
-      '/images/red-velvet.webp',
-      // Ajoutez d'autres photos ici
-    ],
-  },
-  {
-    id: 'number-cake',
-    name: 'Number Cake',
-    description: 'Custom cake with personalized flavors and decorations to celebrate your special occasion',
-    category: 'Birthday',
-    images: [
-      '/images/birthday-cake.jpg',
-      '/images/red-velvet.webp',
+      '/images/custom-cake-3.png',
+      '/images/custom-cake-4.png',
+      '/images/custom-cake-6.png',
+      '/images/custom-cake-7.png',
       // Ajoutez d'autres photos ici
     ],
     featured: true,
   },
   {
-    id: 'character-cake',
-    name: 'Character Cake',
-    description: 'Themed cake inspired by your favorite character or theme',
-    category: 'Birthday',
+    id: 'wedding-cake',
+    name: 'Wedding Cake',
+    description: 'Elegant and refined multi-tiered cake for your special day with customized decorations',
+    category: 'Custom Cakes',
     images: [
-      '/images/character-cake.jpg',
+      '/images/red-velvet.webp',
+      // Ajoutez d'autres photos ici
+    ],
+  },
+  {
+    id: 'character-cake',
+    name: 'Themed Character Cake',
+    description: 'Cake inspired by your favorite characters or themes (cartoons, superheroes, princesses, etc.) perfect for children',
+    category: 'Custom Cakes',
+    images: [
+      '/images/custom-cake.png',
+      '/images/custom-cake-2.png',
+      '/images/custom-cake-8.png',
+      '/images/custom-cake-5.png',
+
+
+      // Ajoutez d'autres photos ici
+    ],
+  },
+  {
+    id: 'simple-cake',
+    name: 'Simple & Elegant Cake',
+    description: 'Clean and elegant design cake perfect for any occasion, available in multiple flavors',
+    category: 'Custom Cakes',
+    images: [
+      '/images/chocolat-cake.jpeg',
       // Ajoutez d'autres photos ici
     ],
   },

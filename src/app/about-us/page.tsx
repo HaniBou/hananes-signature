@@ -56,7 +56,9 @@ export default function About() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/about-story.webp"
+                  // src="/images/about-story.webp"
+                  src="/images/IMG_2466.png"
+                  
                   alt="The story of Hanane's Signature"
                   fill
                   className="object-cover"
@@ -151,7 +153,8 @@ export default function About() {
             >
               <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/about-vision.jpg"
+                  // src="/images/about-vision.jpg"
+                  src="/images/IMG_2464.png"
                   alt="The vision of Hanane's Signature"
                   fill
                   className="object-cover"

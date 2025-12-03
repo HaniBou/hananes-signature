@@ -81,94 +81,79 @@ const ProductModal = ({ product, isOpen, onClose, initialImageIndex = 0 }: Produ
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative z-10 w-full max-w-5xl mx-4 md:mx-8"
+            className="relative z-10 w-[95vw] max-w-6xl max-h-[90vh] mx-4 md:mx-8 bg-brown-dark rounded-lg shadow-2xl border-2 border-gold flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header avec bouton fermer */}
-            <div className="flex justify-between items-center mb-4">
-              <div className="text-cream">
-                {hasMultipleImages && (
-                  <span className="text-lg font-semibold">
-                    {currentImageIndex + 1} / {product.images.length}
-                  </span>
-                )}
-              </div>
-              <button
-                onClick={onClose}
-                className="text-cream hover:text-gold transition-colors duration-200 p-2 hover:bg-white/10 rounded-full"
-                aria-label="Close modal"
-              >
-                <FiX size={32} />
-              </button>
-            </div>
+            {/* Close Button */}
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 z-20 bg-brown/80 hover:bg-brown text-gold p-2 rounded-full transition-all duration-200 hover:scale-110 border-2 border-gold shadow-lg"
+              aria-label="Close modal"
+            >
+              <FiX size={24} />
+            </button>
 
-            {/* Image Container */}
-            <div className="relative bg-brown-dark rounded-lg overflow-hidden shadow-2xl border-2 border-gold">
-              <div className="relative w-full h-[60vh] md:h-[70vh]">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentImageIndex}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src={product.images[currentImageIndex]}
-                      alt={`${product.name} - Image ${currentImageIndex + 1}`}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 768px) 100vw, 80vw"
-                      priority
-                      unoptimized
-                    />
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Navigation Arrows */}
-                {hasMultipleImages && (
-                  <>
-                    {/* Left Arrow */}
-                    <button
-                      onClick={goToPrevious}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-brown/80 hover:bg-brown text-gold p-3 rounded-full transition-all duration-200 hover:scale-110 border-2 border-gold shadow-lg"
-                      aria-label="Previous image"
+            {/* Scrollable Content Container */}
+            <div className="flex-1 overflow-y-auto overflow-x-hidden">
+              {/* Main Content with Image and Thumbnails */}
+              <div className="flex flex-col md:flex-row gap-4 p-4 md:p-6">
+              {/* Image Container with Navigation */}
+              <div className="relative flex-shrink-0 w-full md:w-auto md:flex-1">
+                <div className="relative w-full h-[55vh] bg-brown/30 rounded overflow-hidden">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentImageIndex}
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -50 }}
+                      transition={{ duration: 0.3 }}
+                      className="absolute inset-0"
                     >
-                      <FiChevronLeft size={28} />
-                    </button>
+                      <Image
+                        src={product.images[currentImageIndex]}
+                        alt={`${product.name} - Image ${currentImageIndex + 1}`}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 768px) 95vw, 60vw"
+                        priority
+                        unoptimized
+                      />
+                    </motion.div>
+                  </AnimatePresence>
 
-                    {/* Right Arrow */}
-                    <button
-                      onClick={goToNext}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-brown/80 hover:bg-brown text-gold p-3 rounded-full transition-all duration-200 hover:scale-110 border-2 border-gold shadow-lg"
-                      aria-label="Next image"
-                    >
-                      <FiChevronRight size={28} />
-                    </button>
-                  </>
-                )}
-              </div>
+                  {/* Navigation Arrows - Aligned with Image */}
+                  {hasMultipleImages && (
+                    <>
+                      {/* Left Arrow */}
+                      <button
+                        onClick={goToPrevious}
+                        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-brown/80 hover:bg-brown text-gold p-2 md:p-3 rounded-full transition-all duration-200 hover:scale-110 border-2 border-gold shadow-lg z-10"
+                        aria-label="Previous image"
+                      >
+                        <FiChevronLeft size={24} className="md:w-7 md:h-7" />
+                      </button>
 
-              {/* Product Info */}
-              <div className="bg-brown p-6 border-t-2 border-gold">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-serif text-2xl md:text-3xl text-gold">{product.name}</h3>
-                  <span className="text-sm text-gold-light bg-gold/20 px-3 py-1 rounded-full">
-                    {product.category}
-                  </span>
+                      {/* Right Arrow */}
+                      <button
+                        onClick={goToNext}
+                        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-brown/80 hover:bg-brown text-gold p-2 md:p-3 rounded-full transition-all duration-200 hover:scale-110 border-2 border-gold shadow-lg z-10"
+                        aria-label="Next image"
+                      >
+                        <FiChevronRight size={24} className="md:w-7 md:h-7" />
+                      </button>
+                    </>
+                  )}
                 </div>
-                <p className="text-cream text-base md:text-lg">{product.description}</p>
               </div>
 
-              {/* Thumbnails (si plusieurs images) */}
+              {/* Thumbnails - Vertical on Desktop, Horizontal on Mobile */}
               {hasMultipleImages && (
-                <div className="bg-brown-dark p-4 flex gap-3 overflow-x-auto border-t border-gold/30">
+                <div className="flex md:flex-col gap-2 md:gap-3 overflow-x-auto md:overflow-y-auto md:max-h-[55vh] flex-shrink-0 md:w-24 pb-2 md:pb-0">
                   {product.images.map((image, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`relative flex-shrink-0 w-20 h-20 rounded overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
+                      className={`relative flex-shrink-0 w-20 h-20 md:w-20 md:h-20 rounded overflow-hidden border-2 transition-all duration-200 hover:scale-105 ${
                         index === currentImageIndex
                           ? 'border-gold shadow-lg'
                           : 'border-brown-light opacity-60 hover:opacity-100'
@@ -186,14 +171,26 @@ const ProductModal = ({ product, isOpen, onClose, initialImageIndex = 0 }: Produ
                   ))}
                 </div>
               )}
-            </div>
+              </div>
 
-            {/* Instructions */}
-            <div className="mt-4 text-center text-cream/60 text-sm">
-              {hasMultipleImages && (
-                <p>Utilisez les flèches ← → du clavier ou cliquez sur les boutons pour naviguer</p>
-              )}
-              <p className="mt-1">Appuyez sur Échap ou cliquez en dehors pour fermer</p>
+              {/* Product Info */}
+              <div className="bg-brown px-4 md:px-6 py-4 md:py-5 border-t-2 border-gold">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
+                  <h3 className="font-serif text-xl md:text-2xl lg:text-3xl text-gold">{product.name}</h3>
+                  <span className="text-xs md:text-sm text-gold-light bg-gold/20 px-3 py-1 rounded-full whitespace-nowrap">
+                    {product.category}
+                  </span>
+                </div>
+                <p className="text-cream text-sm md:text-base lg:text-lg leading-relaxed">{product.description}</p>
+              </div>
+
+              {/* Instructions */}
+              <div className="px-4 py-3 text-center text-cream/60 text-sm bg-brown-dark/50">
+                {hasMultipleImages && (
+                  <p>Utilisez les flèches ← → du clavier ou cliquez sur les boutons pour naviguer</p>
+                )}
+                <p className="mt-1">Appuyez sur Échap ou cliquez en dehors pour fermer</p>
+              </div>
             </div>
           </motion.div>
         </motion.div>

@@ -18,7 +18,7 @@ export default function Creations() {
     ? products 
     : products.filter(product => product.category === activeFilter);
   
-  const categories = ['All', 'Algerian', 'French', 'Birthday'];
+  const categories = ['All', 'Algerian', 'French', 'Custom Cakes'];
 
   const handleCardClick = (product: Product) => {
     setSelectedProduct(product);

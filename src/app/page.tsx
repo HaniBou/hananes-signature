@@ -14,7 +14,7 @@ import { getFeaturedProducts, type Product } from '@/data/products';
 
 // Placeholder images - to be replaced with your own images
 const heroImages = [
-  { src: '/images/hero-1.jpeg', alt: 'Traditional Algerian pastries' },
+  { src: '/images/Design.png', alt: 'Traditional Algerian pastries' },
   { src: '/images/hero-2.jpeg', alt: 'French pastries' },
   { src: '/images/hero-3.jpeg', alt: 'Birthday cakes' },
 ];
@@ -56,7 +56,7 @@ export default function Home() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg border-2 border-gold">
                 <Image
-                  src="/images/about.jpg"
+                  src="/images/IMG_2461.png"
                   alt="Hanane's Signature - About Us"
                   fill
                   className="object-cover"
