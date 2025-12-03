@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,6 +9,8 @@ import Footer from '@/components/layout/Footer';
 import SimpleImageSlider from '@/components/ui/SimpleImageSlider';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/ui/ProductCard';
+import ProductModal from '@/components/ui/ProductModal';
+import { getFeaturedProducts, type Product } from '@/data/products';
 
 // Placeholder images - to be replaced with your own images
 const heroImages = [
@@ -16,29 +19,16 @@ const heroImages = [
   { src: '/images/hero-3.jpeg', alt: 'Birthday cakes' },
 ];
 
-// Featured products data
-const featuredProducts = [
-  {
-    name: 'Date Makrout',
-    description: 'Traditional Algerian pastry made with semolina and dates, perfumed with orange blossom water',
-    imageSrc: '/images/makrout.jpg',
-    category: 'Algerian',
-  },
-  {
-    name: 'Mille-feuille',
-    description: 'Classic French pastry made of thin layers of puff pastry and vanilla custard brown',
-    imageSrc: '/images/millefeuille.jpg',
-    category: 'French',
-  },
-  {
-    name: 'Birthday Cake',
-    description: 'Custom cake with personalized flavors and decorations to celebrate your special occasion',
-    imageSrc: '/images/birthday-cake.jpg',
-    category: 'Birthday',
-  },
-];
-
 export default function Home() {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const featuredProducts = getFeaturedProducts();
+
+  const handleCardClick = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
   return (
     <>
       <Header />
@@ -120,13 +110,11 @@ export default function Home() {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredProducts.map((product, index) => (
+            {featuredProducts.map((product) => (
               <ProductCard
-                key={index}
-                name={product.name}
-                description={product.description}
-                imageSrc={product.imageSrc}
-                category={product.category}
+                key={product.id}
+                product={product}
+                onClick={() => handleCardClick(product)}
               />
             ))}
           </div>
@@ -248,6 +236,15 @@ export default function Home() {
         <div className="absolute left-0 top-0 w-32 h-32 bg-gold/10 rounded-br-full"></div>
         <div className="absolute right-0 bottom-0 w-32 h-32 bg-gold/10 rounded-tl-full"></div>
       </section>
+      
+      {/* Modal pour afficher les images en grand */}
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
       
       <Footer />
     </>

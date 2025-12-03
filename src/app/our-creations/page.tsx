@@ -6,96 +6,24 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/ui/ProductCard';
-
-// Product data (replace with your own data)
-const products = [
-  // Algerian Pastries
-  {
-    name: 'Date Makrout',
-    description: 'Pastry made with semolina and dates, perfumed with orange blossom water',
-    imageSrc: '/images/makrout.jpg',
-    category: 'Algerian',
-  },
-  {
-    name: 'Baklawa',
-    description: 'Layered pastry with almonds and honey, flavored with orange blossom water',
-    imageSrc: '/images/baklawa.avif',
-    category: 'Algerian',
-  },
-  {
-    name: 'Kalb el Louz',
-    description: 'Cake made with semolina and almonds, topped with flavored syrup',
-    imageSrc: '/images/kalb-el-louz.jpg',
-    category: 'Algerian',
-  },
-  {
-    name: 'Griwech',
-    description: 'Crispy fried pastry coated with honey',
-    imageSrc: '/images/griwech.jpg',
-    category: 'Algerian',
-  },
-  
-  // French Pastries
-  {
-    name: 'Mille-feuille',
-    description: 'Pastry made of puff pastry layers with vanilla custard cream',
-    imageSrc: '/images/millefeuille.jpg',
-    category: 'French',
-  },
-  {
-    name: 'Fruit Tart',
-    description: 'Tart topped with fresh seasonal fruits on a light custard cream',
-    imageSrc: '/images/tarte-fruits.jpg',
-    category: 'French',
-  },
-  {
-    name: 'Éclair au Chocolat',
-    description: 'Oblong choux pastry filled with chocolate cream and topped with chocolate icing',
-    imageSrc: '/images/eclair.jpg',
-    category: 'French',
-  },
-  {
-    name: 'Paris-Brest',
-    description: 'Ring-shaped choux pastry filled with praline cream',
-    imageSrc: '/images/paris-brest.jpeg',
-    category: 'French',
-  },
-  
-  // Birthday Cakes
-  {
-    name: 'Chocolate Cake',
-    description: 'Rich chocolate cake with chocolate ganache and decoration',
-    imageSrc: '/images/chocolat-cake.jpeg',
-    category: 'Birthday',
-  },
-  {
-    name: 'Red Velvet Cake',
-    description: 'Red velvet cake with cream cheese frosting and personalized decoration',
-    imageSrc: '/images/red-velvet.webp',
-    category: 'Birthday',
-  },
-  {
-    name: 'Number Cake',
-    description: 'Custom cake shaped as numbers or letters, decorated with fresh fruits and flowers',
-    imageSrc: '/images/birthday-cake.jpg',
-    category: 'Birthday',
-  },
-  {
-    name: 'Character Cake',
-    description: 'Themed cake inspired by your favorite character or theme',
-    imageSrc: '/images/character-cake.jpg',
-    category: 'Birthday',
-  },
-];
+import ProductModal from '@/components/ui/ProductModal';
+import { products, type Product } from '@/data/products';
 
 export default function Creations() {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   const filteredProducts = activeFilter === 'All' 
     ? products 
     : products.filter(product => product.category === activeFilter);
   
   const categories = ['All', 'Algerian', 'French', 'Birthday'];
+
+  const handleCardClick = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
 
   return (
     <>
@@ -154,17 +82,15 @@ export default function Creations() {
             <AnimatePresence>
               {filteredProducts.map((product, index) => (
                 <motion.div
-                  key={product.name}
+                  key={product.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   <ProductCard
-                    name={product.name}
-                    description={product.description}
-                    imageSrc={product.imageSrc}
-                    category={product.category}
+                    product={product}
+                    onClick={() => handleCardClick(product)}
                   />
                 </motion.div>
               ))}
@@ -202,6 +128,15 @@ export default function Creations() {
           </div>
         </div>
       </section>
+      
+      {/* Modal pour afficher les images en grand */}
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
       
       <Footer />
     </>
