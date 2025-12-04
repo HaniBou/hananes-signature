@@ -24,7 +24,14 @@ const dancingScript = Dancing_Script({
 
 export const metadata: Metadata = {
   title: "Hanane's Signature | Algerian & French Pastries",
-  description: "Discover the delicious creations of Hanane's Signature: traditional Algerian pastries, French pastries, and custom birthday cakes.",
+  description: "Discover the delicious creations of Hanane's Signature: traditional Algerian pastries, French pastries, and custom cakes. Order your handmade pastries today!",
+  keywords: ["Algerian pastries", "French pastries", "custom cakes", "birthday cakes", "baklawa", "makrout", "mille-feuille", "Hanane's Signature"],
+  authors: [{ name: "Hanane's Signature" }],
+  openGraph: {
+    title: "Hanane's Signature | Algerian & French Pastries",
+    description: "Discover the delicious creations of Hanane's Signature: traditional Algerian pastries, French pastries, and custom cakes.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
