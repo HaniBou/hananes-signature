@@ -34,15 +34,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="preload"
-          href={dancingScript.style.fontFamily.split(',')[0].replace(/"/g, '')}
-          as="font"
-          crossOrigin=""
-          type="font/woff2"
-        />
-      </head>
       <body
         className={`${playfair.variable} ${montserrat.variable} ${dancingScript.variable} font-sans antialiased`}
       >
