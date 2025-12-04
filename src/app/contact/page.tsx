@@ -73,8 +73,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Address</h3>
                     <p className="text-cream">
-                      1250 Bethlehem Pike, Hatfield<br />
-                      19440 Pennsylvania, USA
+                      1250 Bethlehem Pike, Unit G<br />
+                       Hatfield PA 19440
                     </p>
                   </div>
                 </div>

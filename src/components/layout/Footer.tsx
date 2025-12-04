@@ -91,7 +91,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-gold mt-1" />
-                <span>1250 Bethlehem Pike, Hatfield<br />19440 Pennsylvania, USA</span>
+                <span>1250 Bethlehem Pike, Unit G<br />Hatfield PA 19440</span>
               </li>
             </ul>
           </div>
