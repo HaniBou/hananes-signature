@@ -73,8 +73,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Address</h3>
                     <p className="text-cream">
-                      3 Rue de la Corderie<br />
-                      69003 Lyon, France
+                      1250 Bethlehem Pike, Hatfield<br />
+                      19440 Pennsylvania, USA
                     </p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Phone</h3>
                     <p className="text-cream">
-                      +33 01 23 45 67 89
+                      (205) 342-4545
                     </p>
                   </div>
                 </div>
@@ -110,9 +110,9 @@ export default function Contact() {
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Hours</h3>
                     <ul className="text-cream space-y-1">
-                      <li>Monday - Friday: 9:00 AM - 7:00 PM</li>
-                      <li>Saturday: 10:00 AM - 6:00 PM</li>
-                      <li>Sunday: Closed</li>
+                      <li>Monday - Friday: 8:00 AM - 5:00 PM</li>
+                      <li>Saturday: 8:00 AM - 5:00 PM</li>
+                      <li>Sunday: 8:00 AM - 5:00 PM</li>
                     </ul>
                   </div>
                 </div>
@@ -121,15 +121,15 @@ export default function Contact() {
               {/* Map */}
               <div className="bg-white p-4 rounded-lg shadow-md">
                 <div className="aspect-video w-full rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.7215828226294!2d4.804340074348893!3d45.77676971253196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb2d97bbb493%3A0x8e2f61ad598705f6!2s3%20Rue%20de%20la%20Corderie%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1760047780765!5m2!1sfr!2sfr"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    title="Carte"
-                  ></iframe>
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.492984258496!2d-75.2688015260865!3d40.287011663527544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a12392bfffff%3A0x6136d879929efaf8!2s1250%20Bethlehem%20Pike%20%23%20G%2C%20Hatfield%2C%20PA%2019440%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sfr!4v1764803723725!5m2!1sfr!2sfr" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -169,7 +169,7 @@ export default function Contact() {
               },
               {
                 question: "Do you offer a delivery service?",
-                answer: "Yes, we deliver throughout Lyon and its nearby suburbs. Delivery fees vary depending on distance and order size."
+                answer: "Yes, we offer delivery based on your location. Fees vary depending on distance and order size."
               },
             ].map((faq, index) => (
               <motion.div

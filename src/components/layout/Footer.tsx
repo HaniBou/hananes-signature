@@ -17,14 +17,16 @@ const Footer = () => {
               Authentic artisanal pastries, created with passion and expertise.
             </p>
             <div className="flex space-x-4 pt-2">
+                {/*
                 <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cream hover:text-gold transition-colors duration-200"
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cream hover:text-gold transition-colors duration-200"
                 >
-                <FaFacebook size={40} color="brown" /> {/* Exemple: or */}
+                  <FaFacebook size={40} color="brown" />
                 </a>
+                */}
               <a
                 href="https://www.instagram.com/hananestastyflavors/?hl=fr"
                 target="_blank"
@@ -81,7 +83,7 @@ const Footer = () => {
             <ul className="space-y-3 text-black">
               <li className="flex items-center gap-3">
                 <FaPhone className="text-gold" />
-                <span>+33 01 23 45 67 89</span>
+                <span>(205) 255-4006</span>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-gold" />
@@ -89,7 +91,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-gold mt-1" />
-                <span>3 Rue de la Corderie<br />69009 Lyon, France</span>
+                <span>1250 Bethlehem Pike, Hatfield<br />19440 Pennsylvania, USA</span>
               </li>
             </ul>
           </div>

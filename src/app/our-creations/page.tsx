@@ -31,7 +31,7 @@ export default function Creations() {
       
       {/* Hero Section */}
       <section className="pt-44 pb-16 bg-brown-dark text-cream relative" style={{
-        backgroundImage: `url('/images/banner-2.jpg')`,
+        backgroundImage: `url('/images/IMG_2468.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>

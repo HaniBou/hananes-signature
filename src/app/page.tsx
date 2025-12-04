@@ -34,7 +34,7 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="h-screen relative pt-30">
+      <section className="h-screen relative pt-16 md:pt-20">
         <div className="h-full">
           <SimpleImageSlider 
             images={heroImages}

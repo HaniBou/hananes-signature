@@ -17,7 +17,7 @@ const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  // Initialiser EmailJS au chargement du composant
+  // Initialize EmailJS on component mount
   useEffect(() => {
     initEmailJS();
   }, []);
@@ -45,18 +45,18 @@ const ContactForm = () => {
           subject: '',
         });
       } else {
-        throw new Error('Échec de l\'envoi du message');
+        throw new Error('Failed to send message');
       }
     } catch (err) {
-      console.error('Erreur lors de l\'envoi:', err);
-      setError('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+      console.error('Error sending message:', err);
+      setError('An error occurred while sending your message. Please try again.');
     } finally {
       setSubmitting(false);
     }
   };
 
   return (
-    <div className=" p-6 rounded-lg shadow-lg">
+    <div className="bg-brown p-6 md:p-8 rounded-lg shadow-lg border-2 border-gold/30">
       {submitted ? (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -64,7 +64,7 @@ const ContactForm = () => {
           className="text-center py-12"
         >
           <svg 
-            className="w-16 h-16 text-green-500 mx-auto mb-4" 
+            className="w-16 h-16 text-gold mx-auto mb-4" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24" 
@@ -77,18 +77,18 @@ const ContactForm = () => {
               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" 
             />
           </svg>
-          <h3 className="text-2xl font-serif text-black mb-2">Message sent!</h3>
-          <p className="text-black mb-6">We will respond to you as soon as possible.</p>
+          <h3 className="text-2xl font-serif text-cream mb-2">Message sent!</h3>
+          <p className="text-cream/80 mb-6">We will respond to you as soon as possible.</p>
           <button
             onClick={() => setSubmitted(false)}
-            className="bg-gold hover:bg-gold-dark text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
+            className="bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
           >
             New message
           </button>
         </motion.div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <h2 className="text-2xl font-serif text-black text-center mb-6">Contact Us</h2>
+          <h2 className="text-2xl font-serif text-gold text-center mb-6">Contact Us</h2>
           
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
@@ -98,7 +98,7 @@ const ContactForm = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-black mb-1">
+              <label htmlFor="name" className="block text-gold mb-2 font-medium">
                 Full Name
               </label>
               <input
@@ -108,12 +108,12 @@ const ContactForm = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gold rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
+                className="w-full px-4 py-2 bg-cream text-brown-dark border border-gold/30 rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-black mb-1">
+              <label htmlFor="email" className="block text-gold mb-2 font-medium">
                 Email Address
               </label>
               <input
@@ -123,12 +123,12 @@ const ContactForm = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-brown-light/30 rounded focus:outline-none focus:ring-2 focus:ring-gold-light focus:border-transparent"
+                className="w-full px-4 py-2 bg-cream text-brown-dark border border-gold/30 rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-black mb-1">
+              <label htmlFor="phone" className="block text-gold mb-2 font-medium">
                 Phone
               </label>
               <input
@@ -137,12 +137,12 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-brown-light/30 rounded focus:outline-none focus:ring-2 focus:ring-gold-light focus:border-transparent"
+                className="w-full px-4 py-2 bg-cream text-brown-dark border border-gold/30 rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
               />
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-black mb-1">
+              <label htmlFor="subject" className="block text-gold mb-2 font-medium">
                 Subject
               </label>
               <select
@@ -151,7 +151,7 @@ const ContactForm = () => {
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-brown-light/30 rounded focus:outline-none focus:ring-2 focus:ring-gold-light focus:border-transparent"
+                className="w-full px-4 py-2 bg-cream text-brown-dark border border-gold/30 rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
               >
                 <option value="">Select a subject</option>
                 <option value="commande">Order Request</option>
@@ -163,7 +163,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-black mb-1">
+            <label htmlFor="message" className="block text-gold mb-2 font-medium">
               Message
             </label>
             <textarea
@@ -173,7 +173,7 @@ const ContactForm = () => {
               required
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-brown-light/30 rounded focus:outline-none focus:ring-2 focus:ring-gold-light focus:border-transparent"
+              className="w-full px-4 py-2 bg-cream text-brown-dark border border-gold/30 rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
             ></textarea>
           </div>
 
@@ -183,8 +183,8 @@ const ContactForm = () => {
               disabled={submitting}
               className={`transition-all duration-300 cursor-pointer ${
                 submitting
-                  ? 'bg-brown text-cream/70 cursor-not-allowed border-brown-light px-8 py-3 rounded-lg border-2 shadow-lg'
-                  : 'bg-brown hover:bg-gold-dark text-gold px-8 py-3 rounded-lg font-semibold border-2 border-gold hover:border-gold-dark shadow-lg hover:shadow-xl transform hover:scale-105'
+                  ? 'bg-gold/50 text-brown-dark/50 cursor-not-allowed border-gold/50 px-8 py-3 rounded-lg border-2 shadow-lg'
+                  : 'bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105'
               }`}
             >
               {submitting ? 'Sending...' : 'Send'}

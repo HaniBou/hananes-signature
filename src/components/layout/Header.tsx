@@ -37,8 +37,7 @@ const Header = () => {
 
   return (
         <header
-          style={{ backgroundColor: '#ffd0ba' }}
-          className={`fixed w-full z-[100] transition-all duration-300 ${
+          className={`fixed w-full z-[100] transition-all duration-300 bg-brown ${
             isScrolled ? 'shadow-md py-2' : 'shadow-md py-3'
           } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
         >
@@ -47,13 +46,12 @@ const Header = () => {
           <div className="flex items-center gap-4">
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/new-logo3.png"
+            src="/images/mon-logo.png"
             alt="Hanane's Signature"
-            width={200} // taille affichée (ex: 120px)
-            height={200} // taille affichée (ex: 120px)
-            quality={100} // meilleure qualité, moins de flou
-            className="h-auto w-[100px] object-contain bg-cream/90 p-1 rounded-sm"
-            priority // charge l'image rapidement
+            width={200}
+            height={60}             
+            className="h-12 md:h-14 w-auto object-contain"
+            priority
           />
         </Link>
             {/* Titre Hanane's Signature
@@ -80,7 +78,7 @@ const Header = () => {
                   className={`font-serif transition-all duration-300 text-lg tracking-wide relative ${
                     isActive 
                       ? 'text-gold font-bold' 
-                      : 'text-black hover:text-gold'
+                      : 'text-cream hover:text-gold'
                   }`}
                 >
                   {item.title}
@@ -94,7 +92,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-black hover:text-gold focus:outline-none transition-colors duration-300"
+            className="md:hidden text-cream hover:text-gold focus:outline-none transition-colors duration-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -109,7 +107,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-cream/95 shadow-lg"
+            className="md:hidden bg-brown-dark shadow-lg border-t border-brown-light"
           >
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-5">
@@ -127,7 +125,7 @@ const Header = () => {
                       className={`font-serif transition-all duration-300 py-3 text-center text-xl relative ${
                         isActive 
                           ? 'text-gold font-bold bg-gold/10 rounded-lg' 
-                          : 'text-black hover:text-gold'
+                          : 'text-cream hover:text-gold'
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >

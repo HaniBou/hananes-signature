@@ -27,7 +27,7 @@ export const sendEmail = async (formData: {
       {
         from_name: formData.name,
         from_email: formData.email,
-        phone: formData.phone || 'Non fourni',
+        phone: formData.phone || 'Not provided',
         subject: formData.subject,
         message: formData.message,
       }
@@ -36,7 +36,7 @@ export const sendEmail = async (formData: {
     return { success: true, response };
   } catch (error) {
   const errorMessage =
-    error instanceof Error ? error.message : 'Erreur lors de l\'envoi';
+    error instanceof Error ? error.message : 'Error sending message';
 
   return { success: false, error: errorMessage };
 }
