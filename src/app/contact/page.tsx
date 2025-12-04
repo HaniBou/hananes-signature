@@ -72,10 +72,15 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Address</h3>
-                    <p className="text-cream">
+                    <a 
+                      href="https://maps.google.com/?q=1250+Bethlehem+Pike+Unit+G+Hatfield+PA+19440" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-cream hover:text-gold transition-colors duration-200"
+                    >
                       1250 Bethlehem Pike, Unit G<br />
                        Hatfield PA 19440
-                    </p>
+                    </a>
                   </div>
                 </div>
                 
@@ -85,9 +90,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Phone</h3>
-                    <p className="text-cream">
+                    <a 
+                      href="tel:+12053424545" 
+                      className="text-cream hover:text-gold transition-colors duration-200"
+                    >
                       (205) 342-4545
-                    </p>
+                    </a>
                   </div>
                 </div>
                 
@@ -97,9 +105,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Email</h3>
-                    <p className="text-cream">
+                    <a 
+                      href="mailto:contact@hananes-signature.com" 
+                      className="text-cream hover:text-gold transition-colors duration-200"
+                    >
                       contact@hananes-signature.com
-                    </p>
+                    </a>
                   </div>
                 </div>
                 

@@ -83,15 +83,26 @@ const Footer = () => {
             <ul className="space-y-3 text-black">
               <li className="flex items-center gap-3">
                 <FaPhone className="text-gold" />
-                <span>(205) 255-4006</span>
+                <a href="tel:+12052554006" className="hover:text-gold transition-colors duration-200">
+                  (205) 255-4006
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-gold" />
-                <span>contact@hananes-signature.com</span>
+                <a href="mailto:contact@hananes-signature.com" className="hover:text-gold transition-colors duration-200">
+                  contact@hananes-signature.com
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-gold mt-1" />
-                <span>1250 Bethlehem Pike, Unit G<br />Hatfield PA 19440</span>
+                <a 
+                  href="https://maps.google.com/?q=1250+Bethlehem+Pike+Unit+G+Hatfield+PA+19440" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors duration-200"
+                >
+                  1250 Bethlehem Pike, Unit G<br />Hatfield PA 19440
+                </a>
               </li>
             </ul>
           </div>
