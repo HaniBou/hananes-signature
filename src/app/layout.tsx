@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Montserrat, Dancing_Script } from "next/font/google";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 import "./fonts.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${montserrat.variable} ${dancingScript.variable} font-sans antialiased`}
       >
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
