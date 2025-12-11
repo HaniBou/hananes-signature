@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import type { Product } from '@/data/products';
 
 interface ProductCardProps {
@@ -11,11 +10,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, onClick }: ProductCardProps) => {
   return (
-    <motion.div 
-      initial={{ y: 20 }}
-      whileInView={{ y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+    <div 
       onClick={onClick}
       className={`bg-brown rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gold hover:border-gold-dark ${
         onClick ? 'cursor-pointer hover:scale-[1.02] active:scale-[0.98]' : ''
@@ -39,15 +34,15 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
       </div>
       <div className="p-5">
         <div className="flex items-center justify-between mb-2">
-          <h3 className="font-serif text-xl text-gold">{product.name}</h3>
+          <h3 className="font-serif text-xl text-gold line-clamp-1">{product.name}</h3>
           <span className="text-xs text-gold-light">{product.category}</span>
         </div>
-        <p className="text-cream text-sm">{product.description}</p>
+        <p className="text-cream text-sm line-clamp-2">{product.description}</p>
         {onClick && (
-          <p className="text-gold-light text-xs mt-3 italic">Cliquez pour voir plus →</p>
+          <p className="text-gold-light text-xs mt-3 italic">Click to learn more →</p>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

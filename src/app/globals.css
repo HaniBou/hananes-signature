@@ -22,10 +22,7 @@ body {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background-image: url('/images/main-bg.png');
-  background-size: 100% auto;
-  background-position: top center;
-  background-repeat: repeat;
+  background-color: #ffd0ba;
   color: var(--brown);
 }
 

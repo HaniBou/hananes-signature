@@ -54,7 +54,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="order-2 md:order-1"
             >
-              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg border-2 border-gold">
                 <Image
                   // src="/images/about-story.webp"
                   src="/images/IMG_2466.png"
@@ -151,7 +151,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="order-1 md:order-2"
             >
-              <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-[400px] rounded-lg  overflow-hidden shadow-lg border-2 border-gold">
                 <Image
                   // src="/images/about-vision.jpg"
                   src="/images/IMG_2464.png"
