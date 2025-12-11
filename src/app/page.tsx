@@ -14,7 +14,7 @@ import { getFeaturedProducts, type Product } from '@/data/products';
 
 // Placeholder images - to be replaced with your own images
 const heroImages = [
-  { src: '/images/Design.png', alt: 'Traditional Algerian pastries' },
+  { src: '/images/hd2.png', alt: 'Traditional Algerian pastries' },
   { src: '/images/hero-2.jpeg', alt: 'French pastries' },
   { src: '/images/hero-3.jpeg', alt: 'Birthday cakes' },
 ];

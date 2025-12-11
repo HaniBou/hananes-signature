@@ -50,9 +50,9 @@ export default function About() {
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8 }}
-              className="order-2 md:order-1"
+              className="order-1 md:order-1"
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg border-2 border-gold">
                 <Image
@@ -71,9 +71,9 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6 order-1 md:order-2"
+              className="space-y-6 order-2 md:order-2"
             >
               <SectionTitle 
                 title="Our Story" 
@@ -105,9 +105,9 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6 order-2 md:order-1"
+              className="space-y-6 order-1 md:order-1"
             >
               <SectionTitle 
                 title="Our Vision" 
@@ -147,9 +147,9 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8 }}
-              className="order-1 md:order-2"
+              className="order-2 md:order-2"
             >
               <div className="relative h-[400px] rounded-lg  overflow-hidden shadow-lg border-2 border-gold">
                 <Image

@@ -18,7 +18,6 @@ export const products: Product[] = [
       '/images/makrout.jpg',
       // Ajoutez d'autres photos du makrout ici quand vous les aurez
     ],
-    featured: true,
   },
   {
     id: 'baklawa',
@@ -73,6 +72,7 @@ export const products: Product[] = [
       '/images/trompe-loeil-2.png',
       // Ajoutez d'autres photos ici
     ],
+    featured: true,
   },
   {
     id: 'mille-feuille',
@@ -84,7 +84,6 @@ export const products: Product[] = [
       // Ajoutez plusieurs photos de mille-feuille ici
       // Exemple: '/images/millefeuille-2.jpg', '/images/millefeuille-3.jpg'
     ],
-    featured: true,
   },
   {
     id:'petit-four',
@@ -118,6 +117,7 @@ export const products: Product[] = [
       '/images/tartes-fraises.png',
       // Ajoutez d'autres photos ici
     ],
+    featured: true,
   },
   {
     id: 'eclair',
