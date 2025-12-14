@@ -53,7 +53,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const websiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hananes-signature.vercel.app";
+  const websiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.hananessignature.com";
   
   const organizationSchema = {
     "@context": "https://schema.org",
