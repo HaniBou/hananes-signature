@@ -20,14 +20,15 @@ export default function About() {
       
       {/* Hero Section */}
       <section className="pt-44 pb-16 text-black relative">
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url('/images/story.webp')`,
-            backgroundSize: 'cover',
-            // backgroundPosition: 'center'
-          }}
-        ></div>
+        <Image 
+          src="/images/story.webp"
+          alt="About Us Background"
+          fill
+          priority
+          quality={95}
+          className="object-cover object-top"
+          sizes="100vw"
+        />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0 }}
@@ -60,7 +61,7 @@ export default function About() {
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg border-2 border-gold">
                 <Image
                   // src="/images/about-story.webp"
-                  src="/images/IMG_2466.png"
+                  src="/images/IMG_2466.webp"
                   
                   alt="The story of Hanane's Signature"
                   fill

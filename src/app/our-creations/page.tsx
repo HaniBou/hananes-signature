@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import Image from 'next/image';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/ui/ProductCard';
 import ProductModal from '@/components/ui/ProductModal';
@@ -46,14 +47,15 @@ const filteredProducts = useMemo(() => {
       
       {/* Hero Section */}
       <section className="pt-44 pb-16 text-black relative">
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url('/images/IMG_2468.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        ></div>
+        <Image 
+          src="/images/IMG_2468.png"
+          alt="Our Creations Background"
+          fill
+          priority
+          quality={85}
+          className="object-cover"
+          sizes="100vw"
+        />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0 }}

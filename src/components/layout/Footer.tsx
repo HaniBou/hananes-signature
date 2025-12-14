@@ -111,6 +111,11 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-cream/20 mt-8 pt-6 text-center text-black text-sm">
           <p>© {currentYear} Hanane&apos;s Signature. All rights reserved.</p>
+          <p className="mt-2">
+            <Link href="/privacy-policy" className="hover:text-gold transition-colors duration-200">
+              Privacy Policy
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

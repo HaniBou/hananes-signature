@@ -33,16 +33,17 @@ const SimpleImageSlider = ({
       <AnimatePresence initial={false}>
         <motion.div
           key={currentIndex}
-          initial={{ x: "100%" }}
-          animate={{ x: "0%" }}
-          exit={{ x: "-100%" }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full"
         >
           <Image
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
             fill
+            priority={currentIndex === 0}
             className="w-full h-full object-cover"
           />
           

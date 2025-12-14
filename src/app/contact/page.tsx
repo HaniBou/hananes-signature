@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -13,11 +14,16 @@ export default function Contact() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-44 pb-16 text-black relative" style={{
-        backgroundImage: `url('/images/contctus.webp')`,
-        backgroundSize: 'cover',
-        // backgroundPosition: 'center'
-      }}>
+      <section className="pt-44 pb-16 text-black relative">
+        <Image 
+          src="/images/contctus.webp"
+          alt="Contact Us Background"
+          fill
+          priority
+          quality={85}
+          className="object-cover object-bottom"
+          sizes="100vw"
+        />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0 }}
