@@ -82,7 +82,6 @@ export const products: Product[] = [
     images: [
       '/images/mille-feuilles.png',
       // Ajoutez plusieurs photos de mille-feuille ici
-      // Exemple: '/images/millefeuille-2.jpg', '/images/millefeuille-3.jpg'
     ],
   },
   {

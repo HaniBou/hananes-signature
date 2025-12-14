@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -9,14 +9,29 @@ import ProductCard from '@/components/ui/ProductCard';
 import ProductModal from '@/components/ui/ProductModal';
 import { products, type Product } from '@/data/products';
 
+const shuffleProducts = (list: Product[]) => {
+  return [...list].sort(() => Math.random() - 0.5);
+};
+
 export default function Creations() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
-  const filteredProducts = activeFilter === 'All' 
-    ? products 
-    : products.filter(product => product.category === activeFilter);
+const filteredProducts = useMemo(() => {
+  const list =
+    activeFilter === 'All'
+      ? products
+      : products.filter(product => product.category === activeFilter);
+
+  return mounted ? shuffleProducts(list) : list;
+}, [activeFilter, mounted]);
+
   
   const categories = ['All', 'Algerian', 'French', 'Custom Cakes'];
 
@@ -30,24 +45,27 @@ export default function Creations() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-44 pb-16 bg-brown-dark text-cream relative" style={{
-        backgroundImage: `url('/images/IMG_2468.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <div className="absolute inset-0 bg-brown-dark/70"></div>
+      <section className="pt-44 pb-16 text-black relative">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('/images/IMG_2468.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        ></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl"
           >
             <SectionTitle 
               title="Our Creations"
               subtitle="Discover our selection of authentic pastries, made with passion and tradition for your greatest pleasure."
-              titleColor="text-cream"
-              subtitleColor="text-cream/80"
+              titleColor="text-black"
+              subtitleColor="text-black/80"
               underlineColor="bg-gold"
             />
           </motion.div>
@@ -101,12 +119,13 @@ export default function Creations() {
       
       {/* Custom Order Section */}
       <section className="py-16 bg-brown-dark text-cream relative" style={{
-        backgroundImage: `url('/images/pattern-dark.svg')`,
-        backgroundSize: '200px',
+        backgroundImage: `url('/images/bckground.svg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}>
-        <div className="absolute inset-0 bg-brown-dark/90"></div>
+        <div className="absolute inset-0 bg-brown-dark/50"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center bg-white/10 backdrop-blur-lg rounded-2xl p-10 shadow-2xl">
             <SectionTitle 
               title="Custom Orders" 
               subtitle="You have a special event to celebrate? Hanane's Signature creates custom pastries to perfectly match your desires and occasion."

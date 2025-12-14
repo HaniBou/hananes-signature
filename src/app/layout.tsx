@@ -28,6 +28,19 @@ export const metadata: Metadata = {
   description: "Discover the delicious creations of Hanane's Signature: traditional Algerian pastries, French pastries, and custom cakes. Order your handmade pastries today!",
   keywords: ["Algerian pastries", "French pastries", "custom cakes", "birthday cakes", "baklawa", "makrout", "mille-feuille", "Hanane's Signature"],
   authors: [{ name: "Hanane's Signature" }],
+  icons: {
+    icon: [
+      { url: "/favicon/favicon.ico" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "manifest", url: "/favicon/site.webmanifest" },
+    ],
+  },
   openGraph: {
     title: "Hanane's Signature | Algerian & French Pastries",
     description: "Discover the delicious creations of Hanane's Signature: traditional Algerian pastries, French pastries, and custom cakes.",
@@ -40,8 +53,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const websiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hananes-signature.vercel.app";
+  
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Hanane's Signature",
+    "url": websiteUrl,
+    "logo": `${websiteUrl}/images/logo-hananes-signature.png`,
+    "description": "Traditional Algerian and French pastries, custom cakes",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "contact@hananessignature.com"
+    }
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body
         className={`${playfair.variable} ${montserrat.variable} ${dancingScript.variable} font-sans antialiased`}
       >

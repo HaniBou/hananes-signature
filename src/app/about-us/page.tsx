@@ -19,24 +19,27 @@ export default function About() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-44 pb-16 bg-brown-dark text-cream relative" style={{
-        backgroundImage: `url('/images/banner-1.jpg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <div className="absolute inset-0 bg-brown-dark/70"></div>
+      <section className="pt-44 pb-16 text-black relative">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('/images/story.png')`,
+            backgroundSize: 'cover',
+            // backgroundPosition: 'center'
+          }}
+        ></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl "
           >
             <SectionTitle 
               title="About Us"
               subtitle="Discover the story and passion behind Hanane&apos;s Signature, an artisanal pastry shop that celebrates the richness of Algerian and French culinary traditions."
-              titleColor="text-cream"
-              subtitleColor="text-cream/80"
+              titleColor="text-black"
+              subtitleColor="text-black/80"
               underlineColor="bg-gold"
             />
           </motion.div>

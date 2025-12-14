@@ -34,7 +34,7 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="h-screen relative pt-16 md:pt-20">
+      <section className="relative h-[70vh] md:h-[80vh]">
         <div className="h-full">
           <SimpleImageSlider 
             images={heroImages}
@@ -206,25 +206,25 @@ export default function Home() {
       </section>
       
       {/* Contact CTA Section */}
-      <section className="py-20 text-brown relative" style={{
-        backgroundImage: ``,
+      <section className="py-20 bg-brown-dark text-cream relative" style={{
+        backgroundImage: `url('/images/bckground.svg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
-        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0 bg-brown-dark/50"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center bg-white/10 backdrop-blur-lg rounded-2xl p-10 shadow-2xl">
             <SectionTitle 
               title="Ready to order a delicious creation?"
               subtitle="Contact us to discuss your project and create pastries together that will delight your guests."
-              titleColor="text-brown"
-              subtitleColor="text-black"
+              titleColor="text-cream"
+              subtitleColor="text-cream"
               underlineColor="bg-gold"
             />
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-block bg-brown hover:bg-gold-dark text-gold px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
+                className="inline-block bg-gold hover:bg-gold-dark text-brown-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-gold-dark hover:border-brown-dark shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
               >
                 Contact Us
               </Link>

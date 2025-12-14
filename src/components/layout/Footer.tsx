@@ -28,7 +28,7 @@ const Footer = () => {
                 </a>
                 */}
               <a
-                href="https://www.instagram.com/hananestastyflavors/?hl=fr"
+                href="https://www.instagram.com/hananessignature/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cream hover:text-gold transition-colors duration-200"
@@ -89,8 +89,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-gold" />
-                <a href="mailto:contact@hananes-signature.com" className="hover:text-gold transition-colors duration-200">
-                  contact@hananes-signature.com
+                <a href="mailto:contact@hananessignature.com" className="hover:text-gold transition-colors duration-200">
+                  contact@hananessignature.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
