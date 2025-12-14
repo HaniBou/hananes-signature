@@ -42,6 +42,14 @@ body {
 .text-cream { color: var(--cream) !important; }
 .text-black { color: var(--black) !important; }
 
+/* Classes hover pour les couleurs */
+.hover\:text-gold:hover { color: var(--gold) !important; }
+.hover\:text-gold-light:hover { color: var(--gold-light) !important; }
+.hover\:text-gold-dark:hover { color: var(--gold-dark) !important; }
+.hover\:text-brown:hover { color: var(--brown) !important; }
+.hover\:text-brown-dark:hover { color: var(--brown-dark) !important; }
+.hover\:text-cream:hover { color: var(--cream) !important; }
+
 /* Classes de couleur de fond explicites */
 .bg-gold { background-color: var(--gold) !important; }
 .bg-gold-light { background-color: var(--gold-light) !important; }

@@ -116,6 +116,17 @@ const Footer = () => {
               Privacy Policy
             </Link>
           </p>
+          <p className="mt-3 text-black/70 text-xs">
+            Crafted with care by{' '}
+            <a 
+              href="https://hanibou.github.io/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-brown font-semibold hover:text-gold transition-colors duration-300"
+            >
+              Hani
+            </a>
+          </p>
         </div>
       </div>
     </footer>
