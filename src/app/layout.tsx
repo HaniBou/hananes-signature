@@ -26,7 +26,7 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   title: "Hanane's Signature | Algerian & French Pastries",
   description: "Discover the delicious creations of Hanane's Signature: traditional Algerian pastries, French pastries, and custom cakes. Order your handmade pastries today!",
-  keywords: ["Algerian pastries", "French pastries", "custom cakes", "birthday cakes", "baklawa", "makrout", "mille-feuille", "Hanane's Signature"],
+  keywords: ["Algerian pastries", "French pastries", "custom cakes", "birthday cakes", "croissants", "eclairs", "trompe-l'œil", "mille-feuille", "Hanane's Signature"],
   authors: [{ name: "Hanane's Signature" }],
   icons: {
     icon: [
@@ -45,6 +45,16 @@ export const metadata: Metadata = {
     title: "Hanane's Signature | Algerian & French Pastries",
     description: "Discover the delicious creations of Hanane's Signature: traditional Algerian pastries, French pastries, and custom cakes.",
     type: "website",
+    url: "https://www.hananessignature.com",
+    siteName: "Hanane's Signature",
+    images: [
+      {
+        url: "https://www.hananessignature.com/images/trompe-loeil-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Hanane's Signature - Trompe-l'œil Pastries",
+      },
+    ],
   },
 };
 
