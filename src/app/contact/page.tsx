@@ -14,7 +14,7 @@ export default function Contact() {
       
       {/* Hero Section */}
       <section className="pt-44 pb-16 text-black relative" style={{
-        backgroundImage: `url('/images/contctus.png')`,
+        backgroundImage: `url('/images/contctus.webp')`,
         backgroundSize: 'cover',
         // backgroundPosition: 'center'
       }}>

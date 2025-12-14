@@ -14,9 +14,9 @@ import { getFeaturedProducts, type Product } from '@/data/products';
 
 // Placeholder images - to be replaced with your own images
 const heroImages = [
-  { src: '/images/hd2.png', alt: 'Traditional Algerian pastries' },
-  { src: '/images/hero-2.jpeg', alt: 'French pastries' },
-  { src: '/images/hero-3.jpeg', alt: 'Birthday cakes' },
+  { src: '/images/hd2.webp', alt: 'Traditional Algerian pastries' },
+  { src: '/images/hero-2.webp', alt: 'French pastries' },
+  { src: '/images/hero-3.webp', alt: 'Birthday cakes' },
 ];
 
 export default function Home() {
@@ -131,12 +131,7 @@ export default function Home() {
       </section>
       
       {/* Testimonials Section */}
-      <section className="py-20 relative" style={{
-        backgroundImage: `url('/images/testimonial-bg.svg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <div className="absolute inset-0"></div>
+      <section className="py-20">
         <div className="container mx-auto px-4 relative z-10">
           <SectionTitle 
             title="What Our Customers Say" 

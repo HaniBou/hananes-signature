@@ -23,7 +23,7 @@ export default function About() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: `url('/images/story.png')`,
+            backgroundImage: `url('/images/story.webp')`,
             backgroundSize: 'cover',
             // backgroundPosition: 'center'
           }}
