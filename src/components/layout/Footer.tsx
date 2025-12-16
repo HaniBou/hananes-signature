@@ -31,9 +31,9 @@ const Footer = () => {
                 href="https://www.instagram.com/hananessignature/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream hover:text-gold transition-colors duration-200"
+                className="text-brown hover:text-gold transition-colors duration-200"
               >
-                <FaInstagram size={40} color="brown" />
+                <FaInstagram size={40} />
               </a>
             </div>
           </div>

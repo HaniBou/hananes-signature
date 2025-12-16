@@ -34,8 +34,8 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] md:h-[80vh]">
-        <div className="h-full">
+      <section className="relative h-[500px] md:h-[600px]">
+        <div className="absolute inset-0">
           <SimpleImageSlider 
             images={heroImages}
             overlay={false}
