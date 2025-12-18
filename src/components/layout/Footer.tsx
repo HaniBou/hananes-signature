@@ -96,7 +96,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-gold mt-1" />
                 <a 
-                  href="https://maps.google.com/?q=1250+Bethlehem+Pike+Unit+G+Hatfield+PA+19440" 
+                  href="https://maps.app.goo.gl/vkxP6TMqivQCeAaG7" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-gold transition-colors duration-200"

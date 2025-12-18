@@ -78,7 +78,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-serif text-xl text-gold mb-1">Address</h3>
                     <a 
-                      href="https://maps.google.com/?q=1250+Bethlehem+Pike+Unit+G+Hatfield+PA+19440" 
+                      href="https://maps.app.goo.gl/vkxP6TMqivQCeAaG7" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-cream hover:text-gold transition-colors duration-200"
@@ -138,7 +138,7 @@ export default function Contact() {
               <div className="bg-white p-4 rounded-lg shadow-md">
                 <div className="aspect-video w-full rounded-lg overflow-hidden">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.492984258496!2d-75.2688015260865!3d40.287011663527544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a12392bfffff%3A0x6136d879929efaf8!2s1250%20Bethlehem%20Pike%20%23%20G%2C%20Hatfield%2C%20PA%2019440%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sfr!4v1764803723725!5m2!1sfr!2sfr" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.493167228843!2d-75.2662266!3d40.287007599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a10041206965%3A0x46d88c5ed8cb583!2sHanane%E2%80%99s%20Signature%20Patisserie!5e0!3m2!1sfr!2sfr!4v1766101645833!5m2!1sfr!2sfr" 
                     width="100%" 
                     height="100%" 
                     style={{ border: 0 }} 
